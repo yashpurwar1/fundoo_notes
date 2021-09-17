@@ -1,5 +1,5 @@
 const express = require('express');
-
+require("dotenv").config();
 // create express app
 const app = express();
 
@@ -13,22 +13,11 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to FundooNotes application."});
 });
-// Configuring the database
-//const dbConfig = require('./config/database.config.js');
-const mongoose = require('mongoose');
 
-require("dotenv").config();
+//Configuring the database
+const dbConfig = require('./config/database.config.js');
+dbConfig.connection();
 
-//mongoose.Promise = global.Promise;
-// Connecting to the database
-mongoose.connect(process.env.URL, {
-   useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
 require('./app/routes/user.routes.js')(app);
 
 // listen for requests
