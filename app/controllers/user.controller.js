@@ -1,4 +1,5 @@
 const userService = require('../service/user.service.js')
+const validation = require('../utilities/joiValidation.js')
 class Controller {
     register = (req, res) => {
         try {
@@ -8,21 +9,29 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
+            const registerValidation = validation.registerValidation.validate(user);
+            console.log(registerValidation)
+            if (registerValidation.error){
+                return res.status(409).json({
+                    success: false,
+                    message: "validation failed", 
+                })
+            }
 
-                userService.registerUser(user, (error, data) => {
-                    if (error) {
-                        return res.status(409).json({
-                            success: false,
-                            message: 'User already exist',
-                        });
-                    } else{
-                        return res.status(201).json({
-                            success: true, 
-                            message: "User Registered",
-                            data: data,
-                        });
-                    }
-                });
+            userService.registerUser(user, (error, data) => {
+                if (error) {
+                    return res.status(409).json({
+                        success: false,
+                        message: 'User already exist',
+                    });
+                } else{
+                    return res.status(201).json({
+                        success: true, 
+                        message: "User Registered",
+                        data: data,
+                    });
+                }
+            });
         } catch (error) {
             return res.status(500).json({
                 success: false, message: "Error While Registering",

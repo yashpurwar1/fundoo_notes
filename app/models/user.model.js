@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 const userSchema = mongoose.Schema({
     firstName: {
@@ -42,8 +44,14 @@ class userModel {
                     return callback('User already exist', null)
                 }
                 else {
-                    newUser.save();
-                    return callback(null, newUser);
+                    bcrypt.genSalt(saltRounds, function(err, salt) {
+                        bcrypt.hash(newUser.password, salt, function(err, hash) {
+                            // Store hash in your password DB.
+                            newUser.password=hash;
+                            newUser.save();
+                            return callback(null, newUser);
+                        });
+                    });
                 }
             })
         }
