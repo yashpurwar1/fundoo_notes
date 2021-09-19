@@ -10,7 +10,6 @@ class Controller {
                 password: req.body.password
             };
             const registerValidation = validation.registerValidation.validate(user);
-            console.log(registerValidation)
             if (registerValidation.error){
                 return res.status(409).json({
                     success: false,
@@ -46,6 +45,13 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
+            const loginValidation = validation.loginValidation.validate(loginDetails);
+            if (loginValidation.error){
+                return res.status(409).json({
+                    success: false,
+                    message: "validation failed", 
+                })
+            }
             userService.loginUser(loginDetails, (error, data) => {
                 if (error){
                     return res.status(401).json({

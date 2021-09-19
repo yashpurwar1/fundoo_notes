@@ -39,11 +39,7 @@ class userModel {
             password: userDetails.password,
         });
         try {
-            user.findOne({ email: userDetails.email }, (err, data) => {
-                if (data) {
-                    return callback('User already exist', null)
-                }
-                else {
+            
                     bcrypt.genSalt(saltRounds, function(err, salt) {
                         bcrypt.hash(newUser.password, salt, function(err, hash) {
                             // Store hash in your password DB.
@@ -52,8 +48,6 @@ class userModel {
                             return callback(null, newUser);
                         });
                     });
-                }
-            })
         }
         catch (error) {
             return callback('Internal Error', null)
