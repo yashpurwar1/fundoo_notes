@@ -14,11 +14,3 @@ class helper{
 }
 
 module.exports = new helper();
-    // bcrypt.genSalt(saltRounds, function(err, salt) {
-    //     bcrypt.hash(newUser.password, salt, function(err, hash) {
-    //         // Store hash in your password DB.
-    //         newUser.password=hash;
-    //         newUser.save();
-    //         return callback(null, newUser);
-    //     });
-    // })

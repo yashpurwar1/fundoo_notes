@@ -52,7 +52,7 @@ class Controller {
                     message: "validation failed", 
                 })
             }
-            userService.loginUser(loginDetails, (error, data) => {
+            userService.loginUser(loginDetails, (error, token) => {
                 if (error){
                     return res.status(401).json({
                         message: error,
@@ -62,8 +62,8 @@ class Controller {
                 else {
                     return res.status(200).json({
                         message: 'Login Success',
-                        data: data.firstName,
                         status: true,
+                        token: token
                         
                     });
                 }
