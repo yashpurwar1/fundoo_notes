@@ -1,6 +1,7 @@
 const userModel = require('../models/user.model.js')
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const jwt = require('../service/jwt.js');
+
 class userService {
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
@@ -19,11 +20,14 @@ class userService {
             }else{
                 bcrypt.compare(loginDetails.password, data.password, function(err, result) {
                     if(result){
-                        const token = jwt.sign({
-                            firstName: data.firstName,
-                            lastName: data.lastName
-                        }, "secretKey");
-                        return callback (null, token)
+                        jwt.token(data, (err, result)=>{
+                            if(result){
+                                return callback (null, result)
+                            }else{
+                                return callback ('error in jwt', data);
+                            }
+                        });
+                        
                     }else{
                         return callback ('Invalid password', data);
                     }
