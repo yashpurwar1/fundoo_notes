@@ -1,5 +1,5 @@
 const userService = require('../service/user.service.js')
-const validation = require('../utilities/joiValidation.js')
+const utility = require('../utilities/utility.js')
 class Controller {
     register = (req, res) => {
         try {
@@ -9,7 +9,7 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
-            const registerValidation = validation.registerValidation.validate(user);
+            const registerValidation = utility.registerValidation.validate(user);
             if (registerValidation.error){
                 return res.status(409).json({
                     success: false,
@@ -45,7 +45,7 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
-            const loginValidation = validation.loginValidation.validate(loginDetails);
+            const loginValidation = utility.loginValidation.validate(loginDetails);
             if (loginValidation.error){
                 return res.status(409).json({
                     success: false,

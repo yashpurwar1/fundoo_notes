@@ -1,6 +1,6 @@
 const userModel = require('../models/user.model.js')
 const bcrypt = require('bcrypt');
-const jwt = require('../service/jwt.js');
+const utility = require('../utilities/utility.js');
 
 class userService {
     registerUser = (user, callback) => {
@@ -20,11 +20,11 @@ class userService {
             }else{
                 bcrypt.compare(loginDetails.password, data.password, function(err, result) {
                     if(result){
-                        jwt.token(data, (err, result)=>{
+                        utility.token(data, (err, result)=>{
                             if(result){
                                 return callback (null, result)
                             }else{
-                                return callback ('error in jwt', data);
+                                return callback ('Error in token generation', data);
                             }
                         });
                         
