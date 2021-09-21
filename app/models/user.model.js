@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const helper = require('../helper/helper.js');
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
@@ -36,31 +36,29 @@ class userModel {
             email: userDetails.email,
             password: userDetails.password,
         });
-        try {
-            user.findOne({ email: userDetails.email }, (err, data) => {
-                if (data) {
-                    return callback('User already exist', null)
-                }
-                else {
-                    newUser.save();
+
+        helper.hash(newUser.password, (err, hash) => {
+            if (hash) {
+            newUser.password = hash;
+            newUser.save().then(
+                ()=>{
                     return callback(null, newUser);
-                }
-            })
-        }
-        catch (error) {
-            return callback('Internal Error', null)
-        }
+                }).catch(
+                () => {
+                    return callback("Email already registered", null)
+                })
+            }else {
+            return callback("Internal error", null)
+            }
+        });
     }
 
     loginUser = (loginData, callBack) => {
         user.findOne({ email: loginData.email }, (error, data) => {
-            if (error) {
-                return callBack(error, null);
-            } else if (!data) {
+            if (data) {
+                return callBack(null, data);           
+            } else{
                 return callBack("Invalid email", null);
-            } else
-            {
-                return callBack(null, data);
             }
         });
     }

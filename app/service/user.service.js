@@ -1,11 +1,13 @@
 const userModel = require('../models/user.model.js')
+const bcrypt = require('bcrypt');
+const utility = require('../utilities/utility.js');
+
 class userService {
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
             if (err) {
                 return callback(err, null);
             } else {
-                //console.log(data.firstName);
                 return callback(null, data);
             }
         });
@@ -16,11 +18,21 @@ class userService {
             if(err){
                 return callback (err, null);
             }else{
-                if(data.password == loginDetails.password){
-                    return callback (null, data)
-                }else{
-                    return callback ('Invalid password', data);
-                }
+                bcrypt.compare(loginDetails.password, data.password, function(err, result) {
+                    if(result){
+                        utility.token(data, (err, result)=>{
+                            if(result){
+                                return callback (null, result)
+                            }else{
+                                return callback ('Error in token generation', data);
+                            }
+                        });
+                        
+                    }else{
+                        return callback ('Invalid password', data);
+                    }
+                });
+                
             }
         });
     }
