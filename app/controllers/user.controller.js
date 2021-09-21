@@ -21,7 +21,7 @@ class Controller {
                 if (error) {
                     return res.status(409).json({
                         success: false,
-                        message: 'User already exist',
+                        message: error,
                     });
                 } else{
                     return res.status(201).json({

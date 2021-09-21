@@ -40,8 +40,13 @@ class userModel {
         helper.hash(newUser.password, (err, hash) => {
             if (hash) {
             newUser.password = hash;
-            newUser.save();
-            return callback(null, newUser);
+            newUser.save().then(
+                ()=>{
+                    return callback(null, newUser);
+                }).catch(
+                () => {
+                    return callback("Email already registered", null)
+                })
             }else {
             return callback("Internal error", null)
             }
