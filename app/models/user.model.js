@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const helper = require('../helper/helper.js');
+const helper = require('../utilities/helper.js');
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,

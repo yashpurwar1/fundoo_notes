@@ -1,8 +1,6 @@
 const Joi = require('joi');
-const jwt = require('jsonwebtoken');
-require("dotenv").config();
 
-class utility {
+class validation {
     registerValidation =Joi.object({
         firstName: Joi.string()
             .min(2)
@@ -36,17 +34,6 @@ class utility {
 
     });
 
-    token = (data, callback) => {
-        const key = jwt.sign({
-        firstName: data.firstName,
-        lastName: data.lastName
-        }, process.env.SECRET_KEY);
-        if (key){
-            return callback(null, key);    
-        }else{
-            return callback(err, null);
-        }
-        
-    }    
+     
 }
-module.exports=new utility();
+module.exports=new validation();

@@ -1,6 +1,6 @@
 const userModel = require('../models/user.model.js')
 const bcrypt = require('bcrypt');
-const utility = require('../utilities/utility.js');
+const helper = require('../utilities/helper.js');
 
 class userService {
     registerUser = (user, callback) => {
@@ -20,7 +20,7 @@ class userService {
             }else{
                 bcrypt.compare(loginDetails.password, data.password, function(err, result) {
                     if(result){
-                        utility.token(data, (err, result)=>{
+                        helper.token(data, (err, result)=>{
                             if(result){
                                 return callback (null, result)
                             }else{
