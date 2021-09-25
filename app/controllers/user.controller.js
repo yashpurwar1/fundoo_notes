@@ -1,6 +1,20 @@
+/**
+ * @module:         controllers
+ * @file:           user.controller.js
+ * @description:    Taking the request from the client and gives the response.
+ * @author:         Yash
+*/
+
 const userService = require('../service/user.service.js')
 const validation = require('../utilities/validation.js')
 class Controller {
+
+    /**
+     * @description:    Create and save user and sending response to service
+     * @method:         register to save the user
+     * @param:          req,res for service
+     */
+
     register = (req, res) => {
         try {
             const user = {
@@ -38,6 +52,12 @@ class Controller {
             });
         }
     }
+
+    /**
+     * @description:    retrieving login info from user by email and password
+     * @method:         login
+     * @param:          req,res for service
+     */
 
     login = (req, res) => {
         try{

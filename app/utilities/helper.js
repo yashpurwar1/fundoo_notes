@@ -1,3 +1,10 @@
+/**
+ * @module:         utilities
+ * @file:           helper.js
+ * @description:    It contains the hashing and token generation
+ * @author:         Yash
+ */
+
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require("dotenv").config();

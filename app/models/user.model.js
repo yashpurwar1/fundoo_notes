@@ -1,3 +1,10 @@
+/**
+ * @module:         models
+ * @file:           user.model.js
+ * @description:    user.model is for user schema and for hash of the password
+ * @author:         Yash
+ */
+
 const mongoose = require('mongoose');
 const helper = require('../utilities/helper.js');
 const userSchema = mongoose.Schema({
@@ -27,7 +34,11 @@ const userSchema = mongoose.Schema({
 const user = mongoose.model('user', userSchema);
 
 class userModel {
-
+    /**
+     * @description:    Register user in the database
+     * @param:          userDetails
+     * @param:          callback 
+     */
     registerUser = (userDetails, callback) => {
 
         const newUser = new user({
@@ -52,6 +63,12 @@ class userModel {
             }
         });
     }
+
+    /**
+     * @description:    Login user from the database
+     * @param:          loginData 
+     * @param:          callback for service
+     */
 
     loginUser = (loginData, callBack) => {
         user.findOne({ email: loginData.email }, (error, data) => {

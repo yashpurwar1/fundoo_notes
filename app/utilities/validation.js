@@ -1,3 +1,10 @@
+/**
+ * @module:         utilities
+ * @file:           validation.js
+ * @description:    Contains the validation info for register and login
+ * @author:         Yash
+ */
+
 const Joi = require('joi');
 
 class validation {

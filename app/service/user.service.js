@@ -1,8 +1,20 @@
+/**
+ * @module:         service
+ * @file:           user.service.js
+ * @description:    callbacks from the model and comparision of passwords 
+ * @author:         Yash
+ */
+
 const userModel = require('../models/user.model.js')
 const bcrypt = require('bcrypt');
 const helper = require('../utilities/helper.js');
 
 class userService {
+    /**
+     * @description:    registerUser send response to controller
+     * @method:         registerUser to save the user
+     * @param:          user, callback for controller
+     */
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
             if (err) {
@@ -12,6 +24,12 @@ class userService {
             }
         });
     };
+
+    /**
+     * @description:    loginUser send response to the controller
+     * @method:         loginUser
+     * @param:          loginDetails, callback for controller
+     */
 
     loginUser = (loginDetails, callback) => {
         userModel.loginUser(loginDetails, (err, data) => {
