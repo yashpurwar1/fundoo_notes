@@ -16,6 +16,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(201);
         done();
       });
@@ -28,6 +31,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(409);
         done();
       });
@@ -40,6 +46,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(401);
         done();
       });
@@ -52,6 +61,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(401);
         done();
       });
@@ -64,6 +76,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(401);
         done();
       });
@@ -76,6 +91,9 @@ describe('registartion', () => {
       .post('/register')
       .send(registartionDetails)
       .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
         res.should.have.status(401);
         done();
       });
