@@ -25,7 +25,7 @@ class Controller {
             };
             const registerValidation = validation.registerValidation.validate(user);
             if (registerValidation.error){
-                return res.status(409).json({
+                return res.status(401).json({
                     success: false,
                     message: "validation failed", 
                 })
@@ -67,7 +67,7 @@ class Controller {
             };
             const loginValidation = validation.loginValidation.validate(loginDetails);
             if (loginValidation.error){
-                return res.status(409).json({
+                return res.status(401).json({
                     success: false,
                     message: "validation failed", 
                 })
@@ -80,7 +80,7 @@ class Controller {
                     })
                 }
                 else {
-                    return res.status(200).json({
+                    return res.status(201).json({
                         message: 'Login Success',
                         status: true,
                         token: token
