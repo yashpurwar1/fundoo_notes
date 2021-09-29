@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(express.json())
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 // define a simple route

@@ -3,7 +3,7 @@
         "correctRegister":{
             "firstName":"Yash",
             "lastName": "Purwar",
-            "email": "yash18@gmail.com",
+            "email": "yash21@gmail.com",
             "password": "yash76652"
         },
         "registerWithDuplicateEmail":{

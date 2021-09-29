@@ -3,7 +3,7 @@
     "info": {
         "version": "1.0",
         "title": "Fundoo Notes App",
-        "description": "Fundoo Notes Application11"
+        "description": "Fundoo Notes Application"
     },
     "host": "localhost:3000",
     "basePath": "/",
@@ -16,12 +16,13 @@
         "/register": {
             "post": {
                 "tags": ["Register"],
+                
                 "description": "Register new user",
                 "parameters": [
                     {
                         "name": "Register",
                         "in": "body",
-                        "description": "User that we want to register",
+                        "description": "Register",
                         "schema": { 
                             "$ref": "#/definitions/registerUser"
                         }
@@ -51,7 +52,7 @@
                     {
                         "name": "Login",
                         "in": "body",
-                        "description": "User that we want to login",
+                        "description": "Login",
                         "schema": {
                             "$ref": "#/definitions/loginUser"
                         }
