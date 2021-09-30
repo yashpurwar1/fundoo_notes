@@ -7,6 +7,7 @@
 
 const userService = require('../service/user.service.js')
 const validation = require('../utilities/validation.js')
+const { logger } = require('../../logger/logger.js');
 class Controller {
 
     /**
@@ -33,11 +34,13 @@ class Controller {
 
             userService.registerUser(user, (error, data) => {
                 if (error) {
+                    logger.error(error);
                     return res.status(409).json({
                         success: false,
                         message: error,
                     });
                 } else{
+                    logger.info("User Registered")
                     return res.status(201).json({
                         success: true, 
                         message: "User Registered",
@@ -46,6 +49,7 @@ class Controller {
                 }
             });
         } catch (error) {
+            logger.error("Error while registering")
             return res.status(500).json({
                 success: false, message: "Error While Registering",
                 data: null,
@@ -74,12 +78,14 @@ class Controller {
             }
             userService.loginUser(loginDetails, (error, token) => {
                 if (error){
+                    logger.error(error)
                     return res.status(401).json({
                         message: error,
                         status: false,
                     })
                 }
                 else {
+                    logger.info("Login Success");
                     return res.status(201).json({
                         message: 'Login Success',
                         status: true,
@@ -90,6 +96,7 @@ class Controller {
             });
         }
         catch(error) {
+            logger.error("Error while login")
             return res.status(500).json({
                 message: "Error while login",
                 status: false,

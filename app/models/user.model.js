@@ -7,6 +7,7 @@
 
 const mongoose = require('mongoose');
 const helper = require('../utilities/helper.js');
+const { logger } = require('../../logger/logger.js');
 const userSchema = mongoose.Schema({
     firstName: {
         type: String,
