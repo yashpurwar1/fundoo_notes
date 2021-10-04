@@ -7,7 +7,9 @@
 
 const userService = require('../service/user.service.js')
 const validation = require('../utilities/validation.js')
+const nodemailer = require('../utilities/nodemailer')
 const { logger } = require('../../logger/logger.js');
+
 class Controller {
 
     /**
@@ -26,6 +28,7 @@ class Controller {
             };
             const registerValidation = validation.registerValidation.validate(user);
             if (registerValidation.error){
+                logger.error(registerValidation.error);
                 return res.status(401).json({
                     success: false,
                     message: "validation failed", 
@@ -41,6 +44,15 @@ class Controller {
                     });
                 } else{
                     logger.info("User Registered")
+                    // const data = {
+                    //     from: 'no-reply@yash.com',
+                    //     to: user.email,
+                    //     subject: 'Fundoo-Notes',
+                    //     text: 'Registration Success'
+                    // };
+                    // mg.messages().send(data, function (error, body) {
+                    //     console.log(body);
+                    // });
                     return res.status(201).json({
                         success: true, 
                         message: "User Registered",
@@ -71,6 +83,7 @@ class Controller {
             };
             const loginValidation = validation.loginValidation.validate(loginDetails);
             if (loginValidation.error){
+                logger.error(loginValidation.error);
                 return res.status(401).json({
                     success: false,
                     message: "validation failed", 
@@ -104,6 +117,85 @@ class Controller {
             });
         }
 
+    }
+
+    forgotPassword = (req, res) => {
+        try{
+            const user = {
+                email: req.body.email
+            }
+            userService.forgotPassword(user, (error, data) => {
+                if (error){
+                    return res.status(401).json({
+                        message: error,
+                        status: false,
+                    })
+                }
+                else {
+                    // const mailData = {
+                    //     from: 'no-reply@yash.com',
+                    //     to: user.email,
+                    //     subject: 'Forgot Password Link',
+                    //     html:` 
+                    //             <h2>Please copy the following token and use to reset password</h2>
+                    //             <p>${data}</p>
+                    //     `
+                    // };
+                    // mg.messages().send(mailData, function (error, body) {
+                    //     console.log(body);
+                    // });
+                    const forgotMessage = {
+                        email: user.email,
+                        subject: 'Forgot Password Link',
+                        html:` 
+                           <h2>Please copy the following token and use to reset password</h2>
+                           <p>${data}</p>
+                         `
+                    }
+                    nodemailer.sendEmail(forgotMessage);
+                    return res.status(201).json({
+                        message: "Mail Sent Successful",
+                        status: true
+                    });
+                }
+            });
+        }
+        catch(error) {
+            return res.status(500).json({
+                message: "Error while finding email",
+                status: false,
+                data: null
+            });
+        }
+
+    }
+
+    resetPassword = (req, res) => {
+        try{
+            const user = {
+                newPassword: req.body.newPassword,
+                token: req.body.token
+            }
+            userService.resetPassword(user, (error, data) => {
+                if(error){
+                    return res.status(400).json({
+                        message: error,
+                        status: false
+                    })
+                }
+                return res.status(201).json({
+                    message: data,
+                    status: true
+                })
+
+            })
+        }
+        catch(error){
+            return res.status(400).json({
+                message: "Error while sending request",
+                status: false
+            })
+        }
     }
 }
 module.exports = new Controller();

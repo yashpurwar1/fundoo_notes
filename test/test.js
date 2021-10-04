@@ -9,7 +9,7 @@ chai.should();
 
 describe('registartion', () => {
 
-  it('givenRegistrationDetails_whenProper_shouldGive_201Status', (done) => {
+  it('givenRegistrationDetailsWhenCorrectShouldReturn201Status', (done) => {
     const registartionDetails = data.registration.correctRegister;
     chai
       .request(server)
@@ -24,7 +24,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetails_whenDuplicateEmail_shouldGive_409Status', (done) => {
+  it('givenRegistrationDetailsWhenDuplicateShouldReturn409Status', (done) => {
     const registartionDetails = data.registration.registerWithDuplicateEmail;
     chai
       .request(server)
@@ -39,7 +39,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetails_whenNotHavingEmail_shouldGive_401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingEmailShouldReturn401Status', (done) => {
     const registartionDetails = data.registration.registerWithoutEmail;
     chai
       .request(server)
@@ -54,7 +54,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetails_whenNotHavingFirstName_shouldGive_401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingFirstNameShouldReturn401Status', (done) => {
     const registartionDetails = data.registration.registerWithoutFirstName;
     chai
       .request(server)
@@ -69,7 +69,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetails_whenNotHavingLastName_shouldGive_401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingLastNameShouldReturn401Status', (done) => {
     const registartionDetails = data.registration.registerWithoutLastName;
     chai
       .request(server)
@@ -84,7 +84,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetails_whenNotHavingPassword_shouldGive_401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingPasswordShouldReturn401Status', (done) => {
     const registartionDetails = data.registration.registerWithoutPassword;
     chai
       .request(server)
@@ -103,7 +103,7 @@ describe('registartion', () => {
 
 describe('login', () => {
 
-  it('givenLoginDetails_whenProper_shouldGive_201Status', (done) => {
+  it('givenLoginDetailsWhenProperShouldReturn201Status', (done) => {
     const loginDetails = data.login.correctLogin;
     chai
       .request(server)
@@ -118,7 +118,7 @@ describe('login', () => {
       });
   });
 
-  it('givenLoginDetails_whenWrongEmail_shouldGive_401Status', (done) => {
+  it('givenLoginDetailsWhenWrongEmailShouldReturn401Status', (done) => {
     const loginDetails = data.login.loginWithWrongEmail;
     chai
       .request(server)
@@ -133,7 +133,7 @@ describe('login', () => {
       });
   });
 
-  it('givenLoginDetails_whenWrongPassword_shouldGive_401Status', (done) => {
+  it('givenLoginDetailsWhenWrongPasswordShouldReturn401Status', (done) => {
     const loginDetails = data.login.loginWithWrongPassword;
     chai
       .request(server)
@@ -148,7 +148,7 @@ describe('login', () => {
       });
   });
 
-  it('givenLoginDetails_whenWithoutPassword_shouldGive_401Status', (done) => {
+  it('givenLoginDetailsWhenWithoutPasswordShouldReturn401Status', (done) => {
     const loginDetails = data.login.loginWithoutPassword;
     chai
       .request(server)
@@ -163,7 +163,7 @@ describe('login', () => {
       });
   });
 
-  it('givenLoginDetails_whenWithoutEmail_shouldGive_401Status', (done) => {
+  it('givenLoginDetailsWhenWithoutEmailShouldReturn401Status', (done) => {
     const loginDetails = data.login.loginWithoutEmail;
     chai
       .request(server)
