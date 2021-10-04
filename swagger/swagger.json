@@ -69,6 +69,33 @@
                     }
                 }
             }
+        },
+
+        "/forgotPassword": {
+            "post": {
+                "tags": ["Forgot-Password"],
+                "description": "Forgot Password user",
+                "parameters": [
+                    {
+                        "name": "Forgot Password",
+                        "in": "body",
+                        "description": "Enter your registered Mail",
+                        "schema": {
+                            "$ref": "#/definitions/forgotPassword"
+                        }
+                    }
+                ],
+
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
         }
     },
 
@@ -99,6 +126,15 @@
                     "type": "string"
                 },
                 "password": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "forgotPassword": {
+            "type": "object",
+            "properties": {
+                "email": {
                     "type": "string"
                 }
             }
