@@ -1,8 +1,13 @@
-const Joi = require('joi');
-const jwt = require('jsonwebtoken');
-require("dotenv").config();
+/**
+ * @module:         utilities
+ * @file:           validation.js
+ * @description:    Contains the validation info for register and login
+ * @author:         Yash
+ */
 
-class utility {
+const Joi = require('joi');
+
+class validation {
     registerValidation =Joi.object({
         firstName: Joi.string()
             .min(2)
@@ -15,7 +20,7 @@ class utility {
             .pattern(new RegExp('^[A-Z]{1}[a-z]{1,}$')),
 
         email: Joi.string()
-            .pattern(new RegExp('^[a-zA-z]{3}([+-_ .]*[a-zA-Z0-9]+)*[@][a-zA-z0-9]+(.[a-z]{2,3})*$'))
+            //.pattern(new RegExp('^[a-zA-z]{3}([+-_ .]*[a-zA-Z0-9]+)*[@][a-zA-z0-9]+(.[a-z]{2,3})*$'))
             .required(),
 
         password: Joi.string()
@@ -36,17 +41,6 @@ class utility {
 
     });
 
-    token = (data, callback) => {
-        const key = jwt.sign({
-        firstName: data.firstName,
-        lastName: data.lastName
-        }, process.env.SECRET_KEY);
-        if (key){
-            return callback(null, key);    
-        }else{
-            return callback(err, null);
-        }
-        
-    }    
+     
 }
-module.exports=new utility();
+module.exports=new validation();

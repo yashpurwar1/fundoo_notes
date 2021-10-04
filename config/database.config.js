@@ -1,3 +1,10 @@
+/**
+ * @module:         config
+ * @file:           database.config.js
+ * @description:    Database connectivity
+ * @author:         Yash
+ */
+
 const mongoose = require('mongoose');
 require("dotenv").config();
 // Database connection
