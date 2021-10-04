@@ -96,6 +96,32 @@
                     }
                 }
             }
+        },
+        "/resetPassword": {
+            "put": {
+                "tags": ["Reset-Password"],
+                "description": "Reset Password User",
+                "parameters": [
+                    {
+                        "name": "Reset Password",
+                        "in": "body",
+                        "description": "Enter Token recieved in mail and New Password",
+                        "schema": {
+                            "$ref": "#/definitions/resetPassword"
+                        }
+                    }
+                ],
+
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
         }
     },
 
@@ -135,6 +161,18 @@
             "type": "object",
             "properties": {
                 "email": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "resetPassword": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "type": "string"
+                },
+                "newPassword": {
                     "type": "string"
                 }
             }
