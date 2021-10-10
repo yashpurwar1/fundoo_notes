@@ -5,13 +5,11 @@
  * @author:         Yash
  */
 
- const controller = require('../controllers/user.controller.js');
- module.exports=(app) =>{
-     
-     
-     app.post('/register',controller.register);
-     app.post('/login', controller.login);
-     app.post('/forgotPassword', controller.forgotPassword);
-     app.put('/resetPassword', controller.resetPassword)
- 
- }
+const helper = require('../utilities/helper')
+const controller = require('../controllers/user.controller.js');
+module.exports=(app) =>{  
+    app.post('/register',controller.register);
+    app.post('/login', controller.login);
+    app.post('/forgotPassword', controller.forgotPassword);
+    app.put('/resetPassword', helper.verifyToken ,controller.resetPassword)
+}

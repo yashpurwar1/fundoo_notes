@@ -110,3 +110,54 @@
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-04T13:19:02.169Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-04T13:19:08.418Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-04T13:19:13.671Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-06T19:53:52.341Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-06T19:55:08.198Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-06T19:55:24.244Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-06T19:55:37.943Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:41:45.251Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:41:45.383Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.398Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.412Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.422Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.431Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-06T20:41:45.549Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-06T20:41:45.560Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-06T20:41:45.660Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.669Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:41:45.677Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:42:20.941Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:42:21.070Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.084Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.094Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.109Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.126Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-06T20:42:21.259Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-06T20:42:21.272Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-06T20:42:21.386Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.394Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:42:21.407Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:44:14.314Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-06T20:44:14.444Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.457Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.468Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.483Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.497Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-06T20:44:14.627Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-06T20:44:14.639Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-06T20:44:14.751Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.760Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-06T20:44:14.773Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:19:08.213Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:35:27.289Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-10T12:35:31.554Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:36:10.645Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:36:15.726Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:36:23.439Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:36:27.281Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-10T12:36:33.922Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:38:47.338Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-10T12:38:50.129Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:43:02.213Z"}
+{"level":"info","message":"Mail Sent Successful","timestamp":"2021-10-10T12:43:09.559Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-10T12:45:54.544Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-10T12:51:14.029Z"}

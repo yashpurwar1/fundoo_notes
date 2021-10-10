@@ -91,8 +91,8 @@
                     "200": {
                         "description": "ok"
                     },
-                    "404": {
-                        "description": "Not Found"
+                    "400": {
+                        "description": "Error"
                     }
                 }
             }
@@ -100,14 +100,22 @@
         "/resetPassword": {
             "put": {
                 "tags": ["Reset-Password"],
-                "description": "Reset Password User",
+                "description": "Reset Password For Registered User",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Bearer Token for Authorization",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
                     {
                         "name": "Reset Password",
                         "in": "body",
                         "description": "Enter Token recieved in mail and New Password",
                         "schema": {
-                            "$ref": "#/definitions/resetPassword"
+                            "type": "string"
                         }
                     }
                 ],
@@ -117,8 +125,8 @@
                     "200": {
                         "description": "ok"
                     },
-                    "404": {
-                        "description": "Not Found"
+                    "400": {
+                        "description": "Error"
                     }
                 }
             }
@@ -161,18 +169,6 @@
             "type": "object",
             "properties": {
                 "email": {
-                    "type": "string"
-                }
-            }
-        },
-
-        "resetPassword": {
-            "type": "object",
-            "properties": {
-                "token": {
-                    "type": "string"
-                },
-                "newPassword": {
                     "type": "string"
                 }
             }

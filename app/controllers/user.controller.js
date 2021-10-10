@@ -44,15 +44,6 @@ class Controller {
                     });
                 } else{
                     logger.info("User Registered")
-                    // const data = {
-                    //     from: 'no-reply@yash.com',
-                    //     to: user.email,
-                    //     subject: 'Fundoo-Notes',
-                    //     text: 'Registration Success'
-                    // };
-                    // mg.messages().send(data, function (error, body) {
-                    //     console.log(body);
-                    // });
                     return res.status(201).json({
                         success: true, 
                         message: "User Registered",
@@ -63,7 +54,8 @@ class Controller {
         } catch (error) {
             logger.error("Error while registering")
             return res.status(500).json({
-                success: false, message: "Error While Registering",
+                success: false,
+                message: "Error While Registering",
                 data: null,
             });
         }
@@ -126,33 +118,23 @@ class Controller {
             }
             userService.forgotPassword(user, (error, data) => {
                 if (error){
-                    return res.status(401).json({
+                    logger.error(error)
+                    return res.status(400).json({
                         message: error,
                         status: false,
                     })
                 }
                 else {
-                    // const mailData = {
-                    //     from: 'no-reply@yash.com',
-                    //     to: user.email,
-                    //     subject: 'Forgot Password Link',
-                    //     html:` 
-                    //             <h2>Please copy the following token and use to reset password</h2>
-                    //             <p>${data}</p>
-                    //     `
-                    // };
-                    // mg.messages().send(mailData, function (error, body) {
-                    //     console.log(body);
-                    // });
                     const forgotMessage = {
                         email: user.email,
                         subject: 'Forgot Password Link',
                         html:` 
                            <h2>Please copy the following token and use to reset password</h2>
-                           <p>${data}</p>
+                           <p>${process.env.RESET_URL}/resetPassword/${data}</p>
                          `
                     }
                     nodemailer.sendEmail(forgotMessage);
+                    logger.info("Mail Sent Successful");
                     return res.status(201).json({
                         message: "Mail Sent Successful",
                         status: true
@@ -161,6 +143,7 @@ class Controller {
             });
         }
         catch(error) {
+            logger.error(error)
             return res.status(500).json({
                 message: "Error while finding email",
                 status: false,
@@ -173,16 +156,18 @@ class Controller {
     resetPassword = (req, res) => {
         try{
             const user = {
-                newPassword: req.body.newPassword,
-                token: req.body.token
+                email: req.user.email,
+                newPassword: req.body.newPassword
             }
             userService.resetPassword(user, (error, data) => {
                 if(error){
+                    logger.error(error)
                     return res.status(400).json({
                         message: error,
                         status: false
                     })
                 }
+                logger.info("Password updated")
                 return res.status(201).json({
                     message: data,
                     status: true
@@ -191,8 +176,9 @@ class Controller {
             })
         }
         catch(error){
+            logger.error(error)
             return res.status(400).json({
-                message: "Error while sending request",
+                message: "Error while sending request in controller",
                 status: false
             })
         }

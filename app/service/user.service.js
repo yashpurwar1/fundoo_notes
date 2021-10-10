@@ -8,6 +8,7 @@
  const userModel = require('../models/user.model.js')
  const bcrypt = require('bcrypt');
  const helper = require('../utilities/helper.js');
+const { logger } = require('../../logger/logger.js');
  
  class userService {
      /**
@@ -34,7 +35,8 @@
      loginUser = (loginDetails, callback) => {
          userModel.findEmail(loginDetails, (err, data) => {
              if(err){
-                 return callback (err, null);
+                logger.error(err)
+                return callback (err, null);
              }else{
                  bcrypt.compare(loginDetails.password, data.password, (err, result) => {
                      if(result){
@@ -71,27 +73,15 @@
          });
      };
  
-     resetPassword = (user, callback) =>{
-         helper.verifyToken(user.token, (error, data) => {
-             if(error){
-                 return callback("Error in verifying token")
-             }
-             else{
-                 const newUser = {
-                     email : data.email,
-                     password: user.newPassword
-                 }
-                 userModel.resetPassword(newUser, (error, data)=>{
-                     if(error){
-                         return callback(error, null)
-                     }
-                     else{
-                         return callback(null, data)
-                     }
-                 })
-             }
-         })
+    resetPassword = (user, callback) =>{         
+        userModel.resetPassword(user, (error, data)=>{
+            if(error){
+                return callback(error, null)               
+            }else{
+                return callback(null, data)
+            }
+        })
      }
- }
+}
  
  module.exports = new userService();
