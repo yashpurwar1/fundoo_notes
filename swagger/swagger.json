@@ -100,12 +100,12 @@
         "/resetPassword": {
             "put": {
                 "tags": ["Reset-Password"],
-                "description": "Reset Password For Registered User",
+                "description": "Reset Password User",
                 "parameters": [
                     {
                         "name": "Authorization",
                         "in": "header",
-                        "description": "Bearer Token for Authorization",
+                        "description": "Enter token recieved in mail",
                         "schema": {
                             "type": "string"
                         }
@@ -113,9 +113,9 @@
                     {
                         "name": "Reset Password",
                         "in": "body",
-                        "description": "Enter Token recieved in mail and New Password",
+                        "description": "Enter New Password",
                         "schema": {
-                            "type": "string"
+                            "$ref": "#/definitions/resetPassword"
                         }
                     }
                 ],
@@ -169,6 +169,15 @@
             "type": "object",
             "properties": {
                 "email": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "resetPassword": {
+            "type": "object",
+            "properties": {
+                "newPassword": {
                     "type": "string"
                 }
             }
