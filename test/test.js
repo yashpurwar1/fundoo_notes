@@ -177,4 +177,34 @@ describe('login', () => {
         done();
       });
   });
+
+  it('givenForgotPasswordEmailWhenValidShouldReturn200Status', (done) => {
+    const email = data.forgotPassword.ValidEmail;
+    chai
+      .request(server)
+      .post('/forgotPassword')
+      .send(email)
+      .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
+        res.should.have.status(200);
+        done();
+      });
+  });
+
+  it('givenForgotPasswordEmailWhenInvalidShouldReturn400Status', (done) => {
+    const email = data.forgotPassword.InvalidEmail;
+    chai
+      .request(server)
+      .post('/forgotPassword')
+      .send(email)
+      .end((err, res) => {
+        if (err) {
+          return done(err);
+        }
+        res.should.have.status(400);
+        done();
+      });
+  });
 });

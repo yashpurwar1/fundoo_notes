@@ -135,7 +135,7 @@ class Controller {
                     }
                     nodemailer.sendEmail(forgotMessage);
                     logger.info("Mail Sent Successful");
-                    return res.status(201).json({
+                    return res.status(200).json({
                         message: "Mail Sent Successful",
                         status: true
                     });
