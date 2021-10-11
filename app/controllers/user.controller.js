@@ -125,7 +125,7 @@ class Controller {
                     })
                 }
                 else {
-                    const forgotMessage = {
+                    const forgotPasswordMessage = {
                         email: user.email,
                         subject: 'Forgot Password Link',
                         html:` 
@@ -133,7 +133,7 @@ class Controller {
                            <p>${process.env.RESET_URL}/resetPassword/${data}</p>
                          `
                     }
-                    nodemailer.sendEmail(forgotMessage);
+                    nodemailer.sendEmail(forgotPasswordMessage);
                     logger.info("Mail Sent Successful");
                     return res.status(200).json({
                         message: "Mail Sent Successful",

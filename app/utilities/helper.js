@@ -23,8 +23,9 @@ class helper{
      token = (data, callback) => {
          const key = jwt.sign({
          firstName: data.firstName,
-         lastName: data.lastName
-         }, process.env.SECRET_KEY);
+         lastName: data.lastName,
+         id: data._id
+         }, process.env.SECRET_KEY, {expiresIn : '1h'});
          if (key){
              return callback(null, key);    
          }else{

@@ -59,3 +59,4 @@
 {"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-10T19:01:31.222Z"}
 {"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-10T19:01:31.230Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-10T19:01:31.300Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-11T19:51:10.467Z"}
