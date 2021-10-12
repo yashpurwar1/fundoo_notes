@@ -19,7 +19,7 @@ class NoteController{
               }else{
                 console.log(data._id.id)
                 logger.info("Note created successfully")
-                  return res.status(200).json({
+                  return res.status(201).json({
                       message: "Note created successfully with id:",
                       data: data,
                       success: true
@@ -29,7 +29,7 @@ class NoteController{
       }
       catch(error){
         logger.error(error)
-          return res.status(400).json({
+          return res.status(500).json({
               message: "Internal server error",
               success: false
           })
@@ -48,7 +48,7 @@ class NoteController{
           });
         } else {
           logger.info("Data fetched successfully")
-          return res.status(201).json({
+          return res.status(200).json({
             message: 'Fetched successfully',
             success: true,
             data: data
@@ -79,7 +79,7 @@ class NoteController{
           });
         } else {
           logger.info("Note fetched successfully")
-          return res.status(201).json({
+          return res.status(200).json({
             message: 'Fetched successfully',
             success: true,
             data: data
@@ -112,7 +112,7 @@ class NoteController{
           });
         }else{
           logger.info("Note updated successfully")
-          return res.status(201).json({
+          return res.status(204).json({
             message: 'Updated successfully',
             success: true,
             data: data

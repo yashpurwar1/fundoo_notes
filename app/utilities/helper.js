@@ -55,9 +55,9 @@ class helper{
           if (token) {
             jwt.verify(token, process.env.SECRET_KEY, (error, data) => {
               if (error) {
-                return res.status(400).send({ 
+                return res.status(401).send({ 
                   success: false, 
-                  message: 'Invalid Token or token expired'
+                  message: 'Unauthorized Token or token expired'
                 })
               } else {
                 req.user = data;
@@ -67,7 +67,7 @@ class helper{
           } else {
             return res.status(401).send({
                success: false,
-               message: 'Authorisation failed! No token found' 
+               message: 'Invalid Token' 
               });
             }
         } catch (error) {
