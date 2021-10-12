@@ -134,7 +134,7 @@ class Controller {
                          `
                     }
                     nodemailer.sendEmail(forgotPasswordMessage);
-                    logger.info("Mail Sent Successful");
+                    logger.info("Mail Sent Successfully");
                     return res.status(200).json({
                         message: "Mail Sent Successful",
                         status: true

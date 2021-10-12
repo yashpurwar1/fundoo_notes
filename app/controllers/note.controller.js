@@ -1,4 +1,4 @@
-const { error } = require('winston')
+const { logger } = require('../../logger/logger.js');
 const noteService = require('../service/note.service')
 
 class NoteController{
@@ -11,13 +11,16 @@ class NoteController{
           }
           noteService.createNote(note, (error, data) => {
               if(error){
+                logger.error(error)
                   return res.status(400).json({
                       message: error,
                       success: false
                   })
               }else{
+                console.log(data._id.id)
+                logger.info("Note created successfully")
                   return res.status(200).json({
-                      message: "Note created successfully",
+                      message: "Note created successfully with id:",
                       data: data,
                       success: true
                   })
@@ -25,6 +28,7 @@ class NoteController{
           })
       }
       catch(error){
+        logger.error(error)
           return res.status(400).json({
               message: "Internal server error",
               success: false
@@ -37,11 +41,13 @@ class NoteController{
       const id = { id: req.user.id };
       noteService.getNote(id, (error, data) => {
         if (error) {
+          logger.error(error)
           return res.status(400).json({
             message: error,
             success: false
           });
         } else {
+          logger.info("Data fetched successfully")
           return res.status(201).json({
             message: 'Fetched successfully',
             success: true,
@@ -51,6 +57,7 @@ class NoteController{
       });
     } 
     catch {
+      logger.error(error)
       return res.status(500).json({
         message: 'Internal server Error'
       });
@@ -65,11 +72,13 @@ class NoteController{
       }
       noteService.getNoteById(ids, (error, data) =>{
         if (error) {
+          logger.error(error)
           return res.status(400).json({
             message: error,
             success: false
           });
         } else {
+          logger.info("Note fetched successfully")
           return res.status(201).json({
             message: 'Fetched successfully',
             success: true,
@@ -79,6 +88,7 @@ class NoteController{
       })
     }
     catch(error){
+      logger.error(error)
       return res.status(500).json({
         message: 'Internal server Error'
       });
@@ -95,11 +105,13 @@ class NoteController{
       }
       noteService.updateNoteById(note, (error, data) => {
         if (error){
+          logger.error(error)
           return res.status(400).json({
             message: error,
             success: false
           });
         }else{
+          logger.info("Note updated successfully")
           return res.status(201).json({
             message: 'Updated successfully',
             success: true,
@@ -109,6 +121,7 @@ class NoteController{
       })
     }
     catch(error){
+      logger.error(error)
       return res.status(500).json({
         message: 'Internal server Error'
       });
@@ -123,11 +136,13 @@ class NoteController{
       }
       noteService.deleteNoteById(ids, (error, data) => {
         if(error){
+          logger.error(error)
           return res.status(400).json({
             message: error,
             success: false
           })
         }else{
+          logger.info("Note deleted successfully")
           return res.status(202).json({
             message: "Note Deleted successfully",
             data: data,
@@ -137,6 +152,7 @@ class NoteController{
       })
     }
     catch(error){
+      logger.error(error)
       return res.status(500).json({
         message: "Internal server error"
       });
