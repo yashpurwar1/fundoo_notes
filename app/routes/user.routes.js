@@ -14,6 +14,6 @@ module.exports=(app) =>{
     app.post('/forgotPassword', controller.forgotPassword);
     app.put('/resetPassword', helper.verifyToken ,controller.resetPassword);
     app.post('/createNote', helper.verifyToken, noteController.createNote);
-    app.post('/getNote', helper.verifyToken, noteController.getNote);
+    app.get('/getNote', helper.verifyToken, noteController.getNote);
     app.get('/getNoteById/:noteId', helper.verifyToken, noteController.getNoteById);
 }
