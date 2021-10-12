@@ -40,5 +40,17 @@ class NoteService {
       }
     });
   }
+
+  deleteNoteById = (ids, callback) => {
+    noteModel.deleteNoteById(ids, (error, data)=>{
+      console.log(data)
+      if (error){
+        return callback(error, null);
+      }else{
+        return callback(null, data)
+      }
+    })
+  }
+
 }
 module.exports = new NoteService();

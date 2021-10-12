@@ -70,5 +70,18 @@ class NoteModel {
         }
     })
   }
+
+  deleteNoteById = (ids, callback)=>{
+    const filter = {userId: ids.id, _id: ids.noteId};
+    Notes.findOneAndDelete(filter, (error, data) =>{
+      if(error){
+        return callback("Not able to find the note", null)
+      }else{
+        console.log(data)
+        return callback(null, data);
+      }
+    })
+  }
+
 }
 module.exports = new NoteModel();

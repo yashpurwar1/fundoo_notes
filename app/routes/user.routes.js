@@ -17,4 +17,5 @@ module.exports=(app) =>{
     app.get('/getNote', helper.verifyToken, noteController.getNote);
     app.get('/getNoteById/:noteId', helper.verifyToken, noteController.getNoteById);
     app.put('/updateNoteByID/:noteId', helper.verifyToken, noteController.updateNoteById);
+    app.delete('/deleteNoteById/:noteId', helper.verifyToken, noteController.deleteNoteById);
 }
