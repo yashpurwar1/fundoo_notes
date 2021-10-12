@@ -17,10 +17,10 @@ const noteSchema = mongoose.Schema({
     timestamps: true
 });
 
-const NoteRegister = mongoose.model('NoteRegister', noteSchema);
+const Notes = mongoose.model('Notes', noteSchema);
 class NoteModel {
   createNote = (note, callback) => {
-    const noteInfo = new NoteRegister({
+    const noteInfo = new Notes({
       userId: note.id,
       title: note.title,
       description: note.description
@@ -35,7 +35,7 @@ class NoteModel {
   }
 
   getNote = (id, callback) => {
-    NoteRegister.find({ userId: id.id }, (error, data) => {
+    Notes.find({ userId: id.id }, (error, data) => {
       if(error){
         return callback("Incorrect note Id", null);
       }
@@ -46,7 +46,7 @@ class NoteModel {
   }
 
   getNoteById = (ids, callback) => {
-    NoteRegister.find({ userId: ids.id, _id: ids.noteId }, (error, data) => {
+    Notes.find({ userId: ids.id, _id: ids.noteId }, (error, data) => {
       if(error){
         return callback("Not able to fetch notes", null);
       }
@@ -54,6 +54,21 @@ class NoteModel {
         return callback(null, data);
       }
     })
-  }  
+  }
+  
+  updateNoteById = (note, callback) => {
+    const filter = {userId: note.id, _id: note.noteId};
+    const update = {title: note.title, description: note.description};
+
+    Notes.findOneAndUpdate(filter, update, {new: true},(error, data) => {
+        if(error){
+          return callback("Not able to update", null);
+        }
+        else{
+          console.log("in model", data)
+          return callback(null, data);
+        }
+    })
+  }
 }
 module.exports = new NoteModel();

@@ -30,5 +30,15 @@ class NoteService {
       }
     });
   }
+
+  updateNoteById = (note, callback) => {
+    noteModel.updateNoteById(note, (error, data) => {
+      if (error) {
+        return callback(error, null);
+      } else {
+        return callback(null, data);
+      }
+    });
+  }
 }
 module.exports = new NoteService();

@@ -1,3 +1,4 @@
+const { error } = require('winston')
 const noteService = require('../service/note.service')
 
 class NoteController{
@@ -71,6 +72,37 @@ class NoteController{
         } else {
           return res.status(201).json({
             message: 'Fetched successfully',
+            success: true,
+            data: data
+          });
+        }
+      })
+    }
+    catch(error){
+      return res.status(500).json({
+        message: 'Internal server Error'
+      });
+    }
+  }
+
+  updateNoteById = (req, res)=>{
+    try{
+      const note ={
+        noteId: req.params.noteId,
+        id: req.user.id,
+        title: req.body.title,
+        description: req.body.description
+      }
+      console.log(note);
+      noteService.updateNoteById(note, (error, data) => {
+        if (error){
+          return res.status(400).json({
+            message: error,
+            success: false
+          });
+        }else{
+          return res.status(201).json({
+            message: 'Updated successfully',
             success: true,
             data: data
           });
