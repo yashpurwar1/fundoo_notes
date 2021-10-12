@@ -270,6 +270,41 @@
                     }
                 }
             }
+        },
+
+        "/deleteNoteById/{noteId}": {
+            "delete": {
+                "tags": ["Delete Notes By Id"],
+                
+                "description": "Delete note for a particular id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "noteId",
+                        "in": "path",
+                        "description": "Enter id of the note",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
         }
     },
 
