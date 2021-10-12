@@ -60,6 +60,13 @@
         "invalidEmail":{
             "email": "ghjk@gmail.com"
         }
+    },
+    "resetPassword":{
+        "validToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJZYXNoIiwibGFzdE5hbWUiOiJQdXJ3YXIiLCJlbWFpbCI6InlhcHVyd2FyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFhQTnBJbTZlL3RzbGdqYy45R0NXTE9MYXFic3NlcmhmbnZXaWVVS0pqZ0xsS0ZGaXgwck9lIiwiaWF0IjoxNjMzOTgxODk4fQ.3oPUt7pD1yYgw60e82l0fWSv8Pr2rSHE7iWutwzv8h8",
+        "invalidToken":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJZYXNoIiwibGFzdE5hbWUiOiJQdXJ3YXIiLCJlbWFpbCI6InlhcHVyd2FyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFhQTnBJbTZlL3RzbGdqYy45R0NXTE9MYXFic3NlcmhmbnZXaWVVS0pqZ0xsS0ZGaXgwck9lIiwiaWF0IjoxNjM",
+        "validPassword":{
+            "newPassword": "yash456"
+        }
     }
 
 }

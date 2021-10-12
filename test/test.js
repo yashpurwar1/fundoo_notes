@@ -24,7 +24,7 @@ describe('registartion', () => {
       });
   });
 
-  it('givenRegistrationDetailsWhenDuplicateShouldReturn409Status', (done) => {
+  it('givenRegistrationDetailsWhenDuplicateShouldReturn400Status', (done) => {
     const registartionDetails = data.registration.registerWithDuplicateEmail;
     chai
       .request(server)
@@ -34,12 +34,12 @@ describe('registartion', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(409);
+        res.should.have.status(400);
         done();
       });
   });
 
-  it('givenRegistrationDetailsWhenNotHavingEmailShouldReturn401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingEmailShouldReturn422Status', (done) => {
     const registartionDetails = data.registration.registerWithoutEmail;
     chai
       .request(server)
@@ -49,12 +49,12 @@ describe('registartion', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
 
-  it('givenRegistrationDetailsWhenNotHavingFirstNameShouldReturn401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingFirstNameShouldReturn422Status', (done) => {
     const registartionDetails = data.registration.registerWithoutFirstName;
     chai
       .request(server)
@@ -64,12 +64,12 @@ describe('registartion', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
 
-  it('givenRegistrationDetailsWhenNotHavingLastNameShouldReturn401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingLastNameShouldReturn422Status', (done) => {
     const registartionDetails = data.registration.registerWithoutLastName;
     chai
       .request(server)
@@ -79,12 +79,12 @@ describe('registartion', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
 
-  it('givenRegistrationDetailsWhenNotHavingPasswordShouldReturn401Status', (done) => {
+  it('givenRegistrationDetailsWhenNotHavingPasswordShouldReturn422Status', (done) => {
     const registartionDetails = data.registration.registerWithoutPassword;
     chai
       .request(server)
@@ -94,7 +94,7 @@ describe('registartion', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
@@ -118,7 +118,7 @@ describe('login', () => {
       });
   });
 
-  it('givenLoginDetailsWhenWrongEmailShouldReturn401Status', (done) => {
+  it('givenLoginDetailsWhenWrongEmailShouldReturn400Status', (done) => {
     const loginDetails = data.login.loginWithWrongEmail;
     chai
       .request(server)
@@ -128,12 +128,12 @@ describe('login', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(400);
         done();
       });
   });
 
-  it('givenLoginDetailsWhenWrongPasswordShouldReturn401Status', (done) => {
+  it('givenLoginDetailsWhenWrongPasswordShouldReturn400Status', (done) => {
     const loginDetails = data.login.loginWithWrongPassword;
     chai
       .request(server)
@@ -143,12 +143,12 @@ describe('login', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(400);
         done();
       });
   });
 
-  it('givenLoginDetailsWhenWithoutPasswordShouldReturn401Status', (done) => {
+  it('givenLoginDetailsWhenWithoutPasswordShouldReturn422Status', (done) => {
     const loginDetails = data.login.loginWithoutPassword;
     chai
       .request(server)
@@ -158,12 +158,12 @@ describe('login', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
 
-  it('givenLoginDetailsWhenWithoutEmailShouldReturn401Status', (done) => {
+  it('givenLoginDetailsWhenWithoutEmailShouldReturn422Status', (done) => {
     const loginDetails = data.login.loginWithoutEmail;
     chai
       .request(server)
@@ -173,12 +173,15 @@ describe('login', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(401);
+        res.should.have.status(422);
         done();
       });
   });
+});
 
-  it('givenForgotPasswordEmailWhenValidShouldReturn200Status', (done) => {
+describe ('forgotPassword', () =>{
+
+  it('givenForgotPasswordEmailWhenValidShouldReturn250Status', (done) => {
     const email = data.forgotPassword.ValidEmail;
     chai
       .request(server)
@@ -188,7 +191,7 @@ describe('login', () => {
         if (err) {
           return done(err);
         }
-        res.should.have.status(200);
+        res.should.have.status(250);
         done();
       });
   });
@@ -204,6 +207,43 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(400);
+        done();
+      });
+  });
+
+})
+
+describe('resetPassword', ()=>{
+  it('givenResetPasswordTokenWhenValidShouldReturn204Status', (done) => {
+    const token = data.resetPassword.validToken;
+    const newPassword = data.resetPassword.validPassword;
+    chai
+      .request(server)
+      .put('/resetPassword')
+      .set({ authorization: token })
+      .send(newPassword)
+      .end((error, res) => {
+        if(error){
+          return done(error);
+        }
+        res.should.have.status(204);
+        done();
+      });
+  });
+
+  it('givenResetPasswordTokenWhenInvalidShouldReturn401Status', (done) => {
+    const token = data.resetPassword.invalidToken;
+    const newPassword = data.resetPassword.validPassword;
+    chai
+      .request(server)
+      .put('/resetPassword')
+      .set({ authorization: token })
+      .send(newPassword)
+      .end((error, res) => {
+        if(error){
+          return done(error);
+        }
+        res.should.have.status(401);
         done();
       });
   });

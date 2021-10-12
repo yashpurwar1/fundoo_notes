@@ -157,8 +157,11 @@
                 ],
                 "produces": ["application/json"],
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
                     },
                     "400": {
                         "description": "Error"
@@ -186,6 +189,9 @@
                 "responses": {
                     "200": {
                         "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
                     },
                     "400": {
                         "description": "Error"
@@ -221,6 +227,9 @@
                 "responses": {
                     "200": {
                         "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
                     },
                     "400": {
                         "description": "Error"
@@ -262,8 +271,11 @@
                 ],
                 "produces": ["application/json"],
                 "responses": {
-                    "200": {
+                    "204": {
                         "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
                     },
                     "400": {
                         "description": "Error"
@@ -297,8 +309,11 @@
                 ],
                 "produces": ["application/json"],
                 "responses": {
-                    "200": {
+                    "202": {
                         "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
                     },
                     "400": {
                         "description": "Error"

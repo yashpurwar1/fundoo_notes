@@ -17,7 +17,6 @@ class NoteController{
                       success: false
                   })
               }else{
-                console.log(data._id.id)
                 logger.info("Note created successfully")
                   return res.status(201).json({
                       message: "Note created successfully with id:",
