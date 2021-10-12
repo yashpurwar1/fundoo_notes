@@ -65,7 +65,6 @@ class NoteModel {
           return callback("Not able to update", null);
         }
         else{
-          console.log("in model", data)
           return callback(null, data);
         }
     })
@@ -77,7 +76,6 @@ class NoteModel {
       if(error){
         return callback("Not able to find the note", null)
       }else{
-        console.log(data)
         return callback(null, data);
       }
     })

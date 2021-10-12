@@ -121,7 +121,6 @@ class NoteController{
         noteId: req.params.noteId,
         id: req.user.id
       }
-      console.log(ids)
       noteService.deleteNoteById(ids, (error, data) => {
         if(error){
           return res.status(400).json({

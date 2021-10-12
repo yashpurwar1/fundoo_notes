@@ -130,6 +130,41 @@
                     }
                 }
             }
+        },
+
+        "/createNote": {
+            "post": {
+                "tags": ["CreateNote"],
+                
+                "description": "Create a New Note",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Create Note",
+                        "in": "body",
+                        "description": "Create a new Note",
+                        "schema": { 
+                            "$ref": "#/definitions/createNote"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
         }
     },
 
@@ -178,6 +213,18 @@
             "type": "object",
             "properties": {
                 "newPassword": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "createNote": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
                     "type": "string"
                 }
             }
