@@ -81,12 +81,12 @@
          });
      }
      resetPassword = (newUser, callback) =>{
-         user.findOne({email: newUser.email }, (error, data) =>{
+        user.findOne({email: newUser.email }, (error, data) =>{
              if(error){
-                 return callback("No user found with following token", null)
-             }
+                 return callback("No user found with following email", null)
+            }
              else{
-                 helper.passwordHash(newUser.password, (err, hash) => {
+                 helper.passwordHash(newUser.newPassword, (err, hash) => {
                      if (hash) {
                          const updatedPassword = hash;
                          user.updateOne({"_id": data._id}, {"password": updatedPassword}, (error, data) => {

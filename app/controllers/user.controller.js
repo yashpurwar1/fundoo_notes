@@ -29,7 +29,7 @@ class Controller {
             const registerValidation = validation.registerValidation.validate(user);
             if (registerValidation.error){
                 logger.error(registerValidation.error);
-                return res.status(401).json({
+                return res.status(422).json({
                     success: false,
                     message: "validation failed", 
                 })
@@ -38,21 +38,12 @@ class Controller {
             userService.registerUser(user, (error, data) => {
                 if (error) {
                     logger.error(error);
-                    return res.status(409).json({
+                    return res.status(400).json({
                         success: false,
                         message: error,
                     });
                 } else{
                     logger.info("User Registered")
-                    // const data = {
-                    //     from: 'no-reply@yash.com',
-                    //     to: user.email,
-                    //     subject: 'Fundoo-Notes',
-                    //     text: 'Registration Success'
-                    // };
-                    // mg.messages().send(data, function (error, body) {
-                    //     console.log(body);
-                    // });
                     return res.status(201).json({
                         success: true, 
                         message: "User Registered",
@@ -61,9 +52,10 @@ class Controller {
                 }
             });
         } catch (error) {
-            logger.error("Error while registering")
+            logger.error("Internal server error")
             return res.status(500).json({
-                success: false, message: "Error While Registering",
+                success: false,
+                message: "Internal server error",
                 data: null,
             });
         }
@@ -84,7 +76,7 @@ class Controller {
             const loginValidation = validation.loginValidation.validate(loginDetails);
             if (loginValidation.error){
                 logger.error(loginValidation.error);
-                return res.status(401).json({
+                return res.status(422).json({
                     success: false,
                     message: "validation failed", 
                 })
@@ -92,7 +84,7 @@ class Controller {
             userService.loginUser(loginDetails, (error, token) => {
                 if (error){
                     logger.error(error)
-                    return res.status(401).json({
+                    return res.status(400).json({
                         message: error,
                         status: false,
                     })
@@ -109,9 +101,9 @@ class Controller {
             });
         }
         catch(error) {
-            logger.error("Error while login")
+            logger.error("Internal server error")
             return res.status(500).json({
-                message: "Error while login",
+                message: "Internal server error",
                 status: false,
                 data: null
             });
@@ -126,34 +118,23 @@ class Controller {
             }
             userService.forgotPassword(user, (error, data) => {
                 if (error){
-                    return res.status(401).json({
+                    logger.error(error)
+                    return res.status(400).json({
                         message: error,
                         status: false,
                     })
                 }
                 else {
-                    // const mailData = {
-                    //     from: 'no-reply@yash.com',
-                    //     to: user.email,
-                    //     subject: 'Forgot Password Link',
-                    //     html:` 
-                    //             <h2>Please copy the following token and use to reset password</h2>
-                    //             <p>${data}</p>
-                    //     `
-                    // };
-                    // mg.messages().send(mailData, function (error, body) {
-                    //     console.log(body);
-                    // });
-                    const forgotMessage = {
+                    const forgotPasswordMessage = {
                         email: user.email,
                         subject: 'Forgot Password Link',
                         html:` 
-                           <h2>Please copy the following token and use to reset password</h2>
-                           <p>${data}</p>
+                           <p>${process.env.RESET_URL}/resetPassword/${data}</p>
                          `
                     }
-                    nodemailer.sendEmail(forgotMessage);
-                    return res.status(201).json({
+                    nodemailer.sendEmail(forgotPasswordMessage);
+                    logger.info("Mail Sent Successfully");
+                    return res.status(250).json({
                         message: "Mail Sent Successful",
                         status: true
                     });
@@ -161,8 +142,9 @@ class Controller {
             });
         }
         catch(error) {
+            logger.error(error)
             return res.status(500).json({
-                message: "Error while finding email",
+                message: "Internal server error",
                 status: false,
                 data: null
             });
@@ -173,17 +155,19 @@ class Controller {
     resetPassword = (req, res) => {
         try{
             const user = {
-                newPassword: req.body.newPassword,
-                token: req.body.token
+                email: req.user.email,
+                newPassword: req.body.newPassword
             }
             userService.resetPassword(user, (error, data) => {
                 if(error){
+                    logger.error(error)
                     return res.status(400).json({
                         message: error,
                         status: false
                     })
                 }
-                return res.status(201).json({
+                logger.info("Password updated")
+                return res.status(204).json({
                     message: data,
                     status: true
                 })
@@ -191,8 +175,9 @@ class Controller {
             })
         }
         catch(error){
-            return res.status(400).json({
-                message: "Error while sending request",
+            logger.error(error)
+            return res.status(500).json({
+                message: "Internal server error",
                 status: false
             })
         }
