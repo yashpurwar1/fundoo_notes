@@ -151,7 +151,7 @@
                         "in": "body",
                         "description": "Create a new Note",
                         "schema": { 
-                            "$ref": "#/definitions/createNote"
+                            "$ref": "#/definitions/note"
                         }
                     }
                 ],
@@ -227,6 +227,49 @@
                     }
                 }
             }
+        },
+
+        "/updateNoteById/{noteId}": {
+            "put": {
+                "tags": ["Update Notes By Id"],
+                
+                "description": "Update note for a particular id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "noteId",
+                        "in": "path",
+                        "description": "Enter id of the note",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Update Note",
+                        "in": "body",
+                        "description": "Enter the data you want to update",
+                        "schema": { 
+                            "$ref": "#/definitions/note"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
         }
     },
 
@@ -280,7 +323,7 @@
             }
         },
 
-        "createNote": {
+        "note": {
             "type": "object",
             "properties": {
                 "title": {
