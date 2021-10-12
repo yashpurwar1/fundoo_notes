@@ -25,7 +25,7 @@ class helper{
          firstName: data.firstName,
          lastName: data.lastName,
          id: data._id
-         }, process.env.SECRET_KEY, {expiresIn : '1h'});
+         }, process.env.SECRET_KEY);
          if (key){
              return callback(null, key);    
          }else{

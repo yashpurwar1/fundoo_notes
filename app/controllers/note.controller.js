@@ -55,6 +55,34 @@ class NoteController{
       });
     }
   }
+
+  getNoteById = (req, res) => {
+    try{
+      const ids = {
+        id: req.user.id,
+        noteId: req.params.noteId
+      }
+      noteService.getNoteById(ids, (error, data) =>{
+        if (error) {
+          return res.status(400).json({
+            message: error,
+            success: false
+          });
+        } else {
+          return res.status(201).json({
+            message: 'Fetched successfully',
+            success: true,
+            data: data
+          });
+        }
+      })
+    }
+    catch(error){
+      return res.status(500).json({
+        message: 'Internal server Error'
+      });
+    }
+  }
 }
 
 module.exports = new NoteController();
