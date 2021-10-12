@@ -165,6 +165,32 @@
                     }
                 }
             }
+        },
+        "/getNote": {
+            "get": {
+                "tags": ["Get Notes"],
+                
+                "description": "Get all the Notes",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
         }
     },
 
