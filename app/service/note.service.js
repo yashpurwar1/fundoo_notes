@@ -1,23 +1,27 @@
 const noteModel = require('../models/note.model');
 class NoteService {
-  createNote = (note, callback) => {
-    noteModel.createNote(note, (error, data) => {
-      if (error) {
-        return callback(error, null);
-      } else {
-        return callback(null, data);
-      }
-    });
+  createNote = (note) => {
+    return new Promise((resolve, reject) => {
+      noteModel.createNote(note)
+        .then((data) => {
+          resolve(data)
+        })
+        .catch(() => {
+          reject()
+        })
+    })
   }
 
   getNote = (id, callback) => {
-    noteModel.getNote(id, (error, data) => {
-      if (error) {
-        return callback(error, null);
-      } else {
-        return callback(null, data);
-      }
-    });
+    return new Promise((resolve, reject) => {
+      noteModel.getNote(id)
+        .then((data) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 
   getNoteById = (ids, callback) => {

@@ -19,29 +19,32 @@ const noteSchema = mongoose.Schema({
 
 const Notes = mongoose.model('Notes', noteSchema);
 class NoteModel {
-  createNote = (note, callback) => {
-    const noteInfo = new Notes({
-      userId: note.id,
-      title: note.title,
-      description: note.description
-    });
-    noteInfo.save((error, data) => {
-      if (error) {
-        return callback("Note not saved in database", null);
-      } else {
-        return callback(null, data);
-      }
-    });
+  createNote = (note) => {
+    return new Promise((resolve, reject) =>{
+      const noteInfo = new Notes({
+        userId: note.id,
+        title: note.title,
+        description: note.description
+      });
+      noteInfo.save()
+        .then((data) =>{
+          resolve(data)
+        })
+        .catch(() => {
+          reject()
+        })
+    })
   }
 
-  getNote = (id, callback) => {
-    Notes.find({ userId: id.id }, (error, data) => {
-      if(error){
-        return callback("Incorrect note Id", null);
-      }
-      else{
-        return callback(null, data);
-      }
+  getNote = (id) => {
+    return new Promise((resolve, reject) =>{
+      Notes.find({ userId: id.id })
+        .then((data) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject("Incorrect note Id")
+        })
     })
   }
 
