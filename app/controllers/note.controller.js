@@ -63,28 +63,27 @@ class NoteController{
     }
   }
 
-  getNoteById = (req, res) => {
+  getNoteById = async (req, res) => {
     try{
       const ids = {
         id: req.user.id,
         noteId: req.params.noteId
       }
-      noteService.getNoteById(ids, (error, data) =>{
-        if (error) {
-          logger.error(error)
-          return res.status(400).json({
-            message: error,
-            success: false
-          });
-        } else {
-          logger.info("Note fetched successfully")
-          return res.status(200).json({
-            message: 'Fetched successfully',
-            success: true,
-            data: data
-          });
-        }
-      })
+      const data = await noteService.getNoteById(ids)
+      if (data.name) {
+        logger.error("Incorrect noteID")
+        return res.status(400).json({
+          message: "Incorrect noteId",
+          success: false
+        });
+      } else {
+        logger.info("Note fetched successfully")
+        return res.status(200).json({
+          message: 'Fetched successfully',
+          success: true,
+          data: data
+        });
+      }
     }
     catch(error){
       logger.error(error)
@@ -94,7 +93,7 @@ class NoteController{
     }
   }
 
-  updateNoteById = (req, res)=>{
+  updateNoteById = async (req, res)=>{
     try{
       const note ={
         noteId: req.params.noteId,
@@ -102,22 +101,23 @@ class NoteController{
         title: req.body.title,
         description: req.body.description
       }
-      noteService.updateNoteById(note, (error, data) => {
-        if (error){
-          logger.error(error)
-          return res.status(400).json({
-            message: error,
-            success: false
-          });
-        }else{
-          logger.info("Note updated successfully")
-          return res.status(200).json({
-            message: 'Updated successfully',
-            success: true,
-            data: data
-          });
-        }
-      })
+      console.log(note)
+      const data = await noteService.updateNoteById(note)
+      console.log(data.name)
+      if (data.name){
+        logger.error("Note not updated")
+        return res.status(400).json({
+          message: "Note not updated",
+          success: false
+        });
+      }else{
+        logger.info("Note updated successfully")
+        return res.status(200).json({
+          message: 'Updated successfully',
+          success: true,
+          data: data
+        });
+      }
     }
     catch(error){
       logger.error(error)

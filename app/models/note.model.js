@@ -48,29 +48,24 @@ class NoteModel {
     })
   }
 
-  getNoteById = (ids, callback) => {
-    Notes.find({ userId: ids.id, _id: ids.noteId }, (error, data) => {
-      if(error){
-        return callback("Not able to fetch notes", null);
-      }
-      else{
-        return callback(null, data);
-      }
-    })
+  getNoteById = async (ids) => {
+    try{
+      return await Notes.find({ userId: ids.id, _id: ids.noteId })
+    }
+    catch(error){
+      return error;
+    }
   }
   
-  updateNoteById = (note, callback) => {
+  updateNoteById = async (note) => {
     const filter = {userId: note.id, _id: note.noteId};
     const update = {title: note.title, description: note.description};
-
-    Notes.findOneAndUpdate(filter, update, {new: true},(error, data) => {
-        if(error){
-          return callback("Not able to update", null);
-        }
-        else{
-          return callback(null, data);
-        }
-    })
+    try{
+      return await Notes.findOneAndUpdate(filter, update, {new: true})
+    }
+    catch(error){
+      return error;
+    }
   }
 
   deleteNoteById = (ids, callback)=>{

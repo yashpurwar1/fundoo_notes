@@ -324,3 +324,11 @@
 {"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-12T12:08:42.624Z"}
 {"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-12T12:08:42.632Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-12T12:08:42.683Z"}
+{"level":"error","timestamp":"2021-10-13T12:30:47.783Z"}
+{"level":"error","timestamp":"2021-10-13T12:31:04.120Z"}
+{"level":"error","timestamp":"2021-10-13T12:31:21.885Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-13T12:36:36.812Z"}
+{"level":"error","timestamp":"2021-10-13T12:42:11.889Z"}
+{"level":"error","timestamp":"2021-10-13T12:43:52.486Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-13T12:46:31.506Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-13T12:47:35.509Z"}

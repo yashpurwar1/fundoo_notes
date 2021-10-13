@@ -1,3 +1,4 @@
+const { Error } = require('mongoose');
 const noteModel = require('../models/note.model');
 class NoteService {
   createNote = (note) => {
@@ -24,24 +25,22 @@ class NoteService {
     })
   }
 
-  getNoteById = (ids, callback) => {
-    noteModel.getNoteById(ids, (error, data) => {
-      if (error) {
-        return callback(error, null);
-      } else {
-        return callback(null, data);
-      }
-    });
+  getNoteById = async (ids) => {
+    try{
+      return await noteModel.getNoteById(ids)
+    }
+    catch(error){
+      return error;
+    }
   }
 
-  updateNoteById = (note, callback) => {
-    noteModel.updateNoteById(note, (error, data) => {
-      if (error) {
-        return callback(error, null);
-      } else {
-        return callback(null, data);
-      }
-    });
+  updateNoteById = async (note) => {
+    try{
+      return await noteModel.updateNoteById(note)
+    }
+    catch(error){
+      return error;
+    }
   }
 
   deleteNoteById = (ids, callback) => {
