@@ -10,9 +10,9 @@ class NoteController{
           title: req.body.title,
           description: req.body.description
       }
-      const createValidation = validation.createValidate.validate(note);
-      if (createValidation.error){
-        logger.error(createValidation.error);
+      const validate = validation.createValidate.validate(note);
+      if (validate.error){
+        logger.error(validate.error);
         return res.status(422).json({
             success: false,
             message: "validation failed", 
@@ -47,9 +47,9 @@ class NoteController{
   getNote = (req, res) => {
     try {
       const id = { id: req.user.id };
-      const getValidation = validation.getValidate.validate(id);
-      if (getValidation.error){
-        logger.error(getValidation.error);
+      const validate = validation.getValidate.validate(id);
+      if (validate.error){
+        logger.error(validate.error);
         return res.status(422).json({
             success: false,
             message: "validation failed", 
@@ -86,9 +86,9 @@ class NoteController{
         id: req.user.id,
         noteId: req.params.noteId
       }
-      const getNoteByIdValidate = validation.getNoteByIdValidate.validate(ids);
-      if (getNoteByIdValidate.error){
-        logger.error(getNoteByIdValidate.error);
+      const validate = validation.getNoteByIdValidate.validate(ids);
+      if (validate.error){
+        logger.error(validate.error);
         return res.status(422).json({
             success: false,
             message: "validation failed", 
@@ -126,16 +126,15 @@ class NoteController{
         title: req.body.title,
         description: req.body.description
       }
-      const updateValidate = validation.updateValidate.validate(note);
-      if (updateValidate.error){
-        logger.error(updateValidate.error);
+      const validate = validation.updateValidate.validate(note);
+      if (validate.error){
+        logger.error(validate.error);
         return res.status(422).json({
             success: false,
             message: "validation failed", 
         })
       }
       const data = await noteService.updateNoteById(note)
-      console.log(data.name)
       if (data.name){
         logger.error("Note not updated")
         return res.status(400).json({
@@ -165,9 +164,9 @@ class NoteController{
         noteId: req.params.noteId,
         id: req.user.id
       }
-      const deleteValidate = validation.deleteValidate.validate(ids);
-      if (deleteValidate.error){
-        logger.error(deleteValidate.error);
+      const validate = validation.deleteValidate.validate(ids);
+      if (validate.error){
+        logger.error(validate.error);
         return res.status(422).json({
             success: false,
             message: "validation failed", 

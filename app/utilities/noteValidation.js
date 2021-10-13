@@ -2,26 +2,27 @@ const Joi = require('joi');
 
 class noteValidation{
     createValidate = Joi.object({
-        id: Joi.string()
-            .required(),
+        id: Joi.string(),
+            //.required(),
         title: Joi.string()
           .required(),
-        description: Joi.string().min(10)
+        description: Joi.string()
           .required()
+          .min(10)
     });
     getValidate = Joi.object({
         id: Joi.string()
-            .required()
+            //.required()
     });
     getNoteByIdValidate = Joi.object({
-        id: Joi.string()
-            .required(),
+        id: Joi.string(),
+            //.required(),
         noteId: Joi.string()
             .required()
     });
     updateValidate = Joi.object({
-        id: Joi.string()
-            .required(),
+        id: Joi.string(),
+            //.required(),
         noteId: Joi.string()
             .required(),
         title: Joi.string()
@@ -30,8 +31,8 @@ class noteValidation{
           .required()
     });
     deleteValidate = Joi.object({
-        id: Joi.string()
-            .required(),
+        id: Joi.string(),
+            //.required(),
         noteId: Joi.string()
             .required()
     });
