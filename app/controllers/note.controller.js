@@ -1,30 +1,39 @@
 const { logger } = require('../../logger/logger.js');
-const noteService = require('../service/note.service')
+const noteService = require('../service/note.service');
+const validation = require('../utilities/noteValidation');
 
 class NoteController{
   createNote = (req, res) => {
     try{
-        const note = {
-            id: req.user.id,
-            title: req.body.title,
-            description: req.body.description
-        }
-        noteService.createNote(note)
-          .then((data) => {
-            logger.info("Note created successfully")
-            return res.status(201).json({
-              message: "Note created successfully with id:",
-              data: data,
-              success: true
-            })
+      const note = {
+          id: req.user.id,
+          title: req.body.title,
+          description: req.body.description
+      }
+      const createValidation = validation.createValidate.validate(note);
+      if (createValidation.error){
+        logger.error(createValidation.error);
+        return res.status(422).json({
+            success: false,
+            message: "validation failed", 
+        })
+      }
+      noteService.createNote(note)
+        .then((data) => {
+          logger.info("Note created successfully")
+          return res.status(201).json({
+            message: "Note created successfully with id:",
+            data: data,
+            success: true
           })
-          .catch(()=>{
-            logger.error("Note not saved in database")
-            return res.status(400).json({
-              message: "Note not saved in database",
-              success: false
-            })
+        })
+        .catch(()=>{
+          logger.error("Note not saved in database")
+          return res.status(400).json({
+            message: "Note not saved in database",
+            success: false
           })
+        })
     }
     catch(error){
       logger.error(error)
@@ -38,6 +47,14 @@ class NoteController{
   getNote = (req, res) => {
     try {
       const id = { id: req.user.id };
+      const getValidation = validation.getValidate.validate(id);
+      if (getValidation.error){
+        logger.error(getValidation.error);
+        return res.status(422).json({
+            success: false,
+            message: "validation failed", 
+        })
+      }
       noteService.getNote(id)
         .then((data) => {
           logger.info("Data fetched successfully")
@@ -68,6 +85,14 @@ class NoteController{
       const ids = {
         id: req.user.id,
         noteId: req.params.noteId
+      }
+      const getNoteByIdValidate = validation.getNoteByIdValidate.validate(ids);
+      if (getNoteByIdValidate.error){
+        logger.error(getNoteByIdValidate.error);
+        return res.status(422).json({
+            success: false,
+            message: "validation failed", 
+        })
       }
       const data = await noteService.getNoteById(ids)
       if (data.name) {
@@ -101,7 +126,14 @@ class NoteController{
         title: req.body.title,
         description: req.body.description
       }
-      console.log(note)
+      const updateValidate = validation.updateValidate.validate(note);
+      if (updateValidate.error){
+        logger.error(updateValidate.error);
+        return res.status(422).json({
+            success: false,
+            message: "validation failed", 
+        })
+      }
       const data = await noteService.updateNoteById(note)
       console.log(data.name)
       if (data.name){
@@ -132,6 +164,14 @@ class NoteController{
       const ids = {
         noteId: req.params.noteId,
         id: req.user.id
+      }
+      const deleteValidate = validation.deleteValidate.validate(ids);
+      if (deleteValidate.error){
+        logger.error(deleteValidate.error);
+        return res.status(422).json({
+            success: false,
+            message: "validation failed", 
+        })
       }
       noteService.deleteNoteById(ids, (error, data) => {
         if(error){

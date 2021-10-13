@@ -829,3 +829,15 @@
 {"level":"error","message":"Note not updated","timestamp":"2021-10-13T12:46:31.506Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-13T12:47:31.417Z"}
 {"level":"error","message":"Note not updated","timestamp":"2021-10-13T12:47:35.508Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-13T12:58:29.707Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-13T12:58:45.717Z"}
+{"_original":{"description":"descr","id":"6159541990ba032e79cf82eb","title":"title new"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"descr"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-13T12:58:54.575Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-13T13:10:20.261Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-13T13:10:53.140Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-13T13:11:11.484Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-13T13:11:41.829Z"}
+{"_original":{"description":"updated","id":"6159541990ba032e79cf82eb","noteId":"6166dadd5183a867c5588389","title":"Update 10"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"updated"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-13T13:11:57.831Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-13T13:12:05.855Z"}
+{"level":"error","timestamp":"2021-10-13T13:12:19.563Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-13T13:12:38.200Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-13T13:12:48.209Z"}
