@@ -23,5 +23,6 @@ module.exports=(app) =>{
     app.delete('/deleteNoteById/:noteId', helper.verifyToken, noteController.deleteNoteById);
     //Api routes for label
     app.post('/createLabel', helper.verifyToken, labelController.createLabel);
-    app.get('/getLabel', helper.verifyToken, labelController.getLabel)
+    app.get('/getLabel', helper.verifyToken, labelController.getLabel);
+    app.get('/getLabelById/:labelId', helper.verifyToken, labelController.getLabelById);
 }

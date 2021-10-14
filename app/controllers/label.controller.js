@@ -73,5 +73,35 @@ class labelController{
           });
         }
     }
+
+    getLabelById = async (req, res) => {
+        try{
+          const ids = {
+            id: req.user.id,
+            labelId: req.params.labelId
+          }
+          const data = await labelService.getLabelById(ids)
+          if (data.name) {
+            logger.error("Incorrect LabelID")
+            return res.status(400).json({
+              message: "Incorrect LabelId",
+              success: false
+            });
+          } else {
+            logger.info("Label fetched successfully")
+            return res.status(200).json({
+              message: 'Fetched successfully',
+              success: true,
+              data: data
+            });
+          }
+        }
+        catch(error){
+          logger.error(error)
+          return res.status(500).json({
+            message: 'Internal server Error'
+          });
+        }
+      }
 }
 module.exports = new labelController();

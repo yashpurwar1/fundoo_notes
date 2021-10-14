@@ -22,5 +22,13 @@ class LabelService {
         })
     })
   }
+  getLabelById = async (ids) => {
+    try{
+      return await labelModel.getLabelById(ids)
+    }
+    catch(error){
+      return error;
+    }
+  }
 }
 module.exports = new LabelService();

@@ -40,5 +40,14 @@ class LabelModel {
         })
     })
   }
+
+  getLabelById = async (ids) => {
+    try{
+      return await Label.find({ userId: ids.id, _id: ids.labelId })
+    }
+    catch(error){
+      return error;
+    }
+  }
 }
 module.exports = new LabelModel();

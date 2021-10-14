@@ -1824,3 +1824,10 @@
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:00.242Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:02.800Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:05.090Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:07.593Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-14T11:59:13.430Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:48.340Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T11:59:56.679Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:00:04.225Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:00:07.401Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:00:11.920Z"}
