@@ -39,5 +39,15 @@ class LabelService {
       return error;
     }
   }
+
+  deleteLabelById = (ids, callback) => {
+    labelModel.deleteLabelById(ids, (error, data)=>{
+      if (error){
+        return callback(error, null);
+      }else{
+        return callback(null, data)
+      }
+    })
+  }
 }
 module.exports = new LabelService();

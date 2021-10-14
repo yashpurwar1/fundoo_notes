@@ -1860,3 +1860,15 @@
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:22:43.880Z"}
 {"level":"info","message":"Label updated successfully","timestamp":"2021-10-14T12:22:46.194Z"}
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:23:00.329Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:23:11.203Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-14T12:23:15.790Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:27:02.380Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-14T12:27:42.887Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:28:34.399Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:28:42.403Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:28:53.834Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:29:00.925Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:29:08.065Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-14T12:29:08.759Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-14T12:29:16.114Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-14T12:29:39.064Z"}

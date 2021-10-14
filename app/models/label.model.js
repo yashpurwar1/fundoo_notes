@@ -60,5 +60,16 @@ class LabelModel {
       return error;
     }
   }
+
+  deleteLabelById = (ids, callback)=>{
+    const filter = {userId: ids.id, _id: ids.labelId};
+    Label.findOneAndDelete(filter, (error, data) =>{
+      if(error){
+        return callback("Not able to find the label", null)
+      }else{
+        return callback(null, data);
+      }
+    })
+  }
 }
 module.exports = new LabelModel();

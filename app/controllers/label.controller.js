@@ -142,5 +142,36 @@ class labelController{
           });
         }
     }
+
+    deleteLabelById = (req, res) => {
+        try{
+          const ids = {
+            labelId: req.params.labelId,
+            id: req.user.id
+          }
+          labelService.deleteLabelById(ids, (error, data) => {
+            if(error){
+              logger.error(error)
+              return res.status(400).json({
+                message: error,
+                success: false
+              })
+            }else{
+              logger.info("Label deleted successfully")
+              return res.status(204).json({
+                message: "Label Deleted successfully",
+                data: data,
+                success: true
+              })
+            }
+          })
+        }
+        catch(error){
+          logger.error(error)
+          return res.status(500).json({
+            message: "Internal server error"
+          });
+        }
+      }
 }
 module.exports = new labelController();
