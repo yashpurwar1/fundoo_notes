@@ -1,4 +1,3 @@
-const { Error } = require('mongoose');
 const noteModel = require('../models/note.model');
 class NoteService {
   createNote = (note) => {
@@ -13,7 +12,7 @@ class NoteService {
     })
   }
 
-  getNote = (id, callback) => {
+  getNote = (id) => {
     return new Promise((resolve, reject) => {
       noteModel.getNote(id)
         .then((data) => {

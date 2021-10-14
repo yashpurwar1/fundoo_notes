@@ -22,7 +22,7 @@ class NoteController{
         .then((data) => {
           logger.info("Note created successfully")
           return res.status(201).json({
-            message: "Note created successfully with id:",
+            message: "Note created successfully",
             data: data,
             success: true
           })

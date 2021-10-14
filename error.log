@@ -953,3 +953,16 @@
 {"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-13T19:21:18.147Z"}
 {"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-13T19:21:18.154Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-13T19:21:18.194Z"}
+{"level":"error","timestamp":"2021-10-14T11:08:04.721Z"}
+{"level":"error","timestamp":"2021-10-14T11:08:27.972Z"}
+{"level":"error","timestamp":"2021-10-14T11:08:55.548Z"}
+{"level":"error","timestamp":"2021-10-14T11:09:23.062Z"}
+{"level":"error","timestamp":"2021-10-14T11:10:01.949Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","lableName":"Yash"},"details":[{"context":{"key":"label","label":"label"},"message":"\"label\" is required","path":["label"],"type":"any.required"}],"level":"error","timestamp":"2021-10-14T11:10:59.981Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","lableName":"Yash"},"details":[{"context":{"key":"labelName","label":"labelName"},"message":"\"labelName\" is required","path":["labelName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-14T11:11:34.777Z"}
+{"level":"error","timestamp":"2021-10-14T11:12:20.275Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","lableName":"Yash"},"details":[{"context":{"key":"labelName","label":"labelName"},"message":"\"labelName\" is required","path":["labelName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-14T11:12:32.192Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb"},"details":[{"context":{"key":"labelName","label":"labelName"},"message":"\"labelName\" is required","path":["labelName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-14T11:13:00.910Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb"},"details":[{"context":{"key":"labelName","label":"labelName"},"message":"\"labelName\" is required","path":["labelName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-14T11:13:19.693Z"}
+{"level":"error","timestamp":"2021-10-14T11:48:25.334Z"}
+{"_original":"Yash Fav","details":[{"context":{"label":"value","type":"object","value":"Yash Fav"},"message":"\"value\" must be of type object","path":[],"type":"object.base"}],"level":"error","timestamp":"2021-10-14T11:51:32.627Z"}
