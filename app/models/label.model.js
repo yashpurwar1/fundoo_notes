@@ -29,6 +29,16 @@ class LabelModel {
         })
     })
   }
-  
+  getLabel = (id) => {
+    return new Promise((resolve, reject) =>{
+      Label.find({ userId: id.id })
+        .then((data) => {
+          resolve(data)
+        })
+        .catch(() => {
+          reject("Incorrect note Id")
+        })
+    })
+  }
 }
 module.exports = new LabelModel();

@@ -46,6 +46,32 @@ class labelController{
         }
     }
 
-    
+    getLabel = (req, res) => {
+        try {
+          const id = { id: req.user.id };
+          labelService.getLabel(id)
+            .then((data) => {
+              logger.info("Data fetched successfully")
+              return res.status(200).json({
+                message: 'Fetched successfully',
+                success: true,
+                data: data
+              });
+            })
+            .catch((error) => {
+              logger.error(error)
+              return res.status(400).json({
+                message: error,
+                success: false
+              });
+            })
+        } 
+        catch {
+          logger.error(error)
+          return res.status(500).json({
+            message: 'Internal server Error'
+          });
+        }
+    }
 }
 module.exports = new labelController();
