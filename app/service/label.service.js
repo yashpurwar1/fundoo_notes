@@ -30,5 +30,14 @@ class LabelService {
       return error;
     }
   }
+
+  updateLabelById = async (note) => {
+    try{
+      return await labelModel.updateLabelById(note)
+    }
+    catch(error){
+      return error;
+    }
+  }
 }
 module.exports = new LabelService();

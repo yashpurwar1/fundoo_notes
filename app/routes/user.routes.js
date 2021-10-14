@@ -25,4 +25,5 @@ module.exports=(app) =>{
     app.post('/createLabel', helper.verifyToken, labelController.createLabel);
     app.get('/getLabel', helper.verifyToken, labelController.getLabel);
     app.get('/getLabelById/:labelId', helper.verifyToken, labelController.getLabelById);
+    app.put('/updateLabelByID/:labelId', helper.verifyToken, labelController.updateLabelById);
 }

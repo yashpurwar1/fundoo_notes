@@ -49,5 +49,16 @@ class LabelModel {
       return error;
     }
   }
+
+  updateLabelById = async (label) => {
+    const filter = {userId: label.id, _id: label.labelId};
+    const update = {labelName: label.labelName};
+    try{
+      return await Label.findOneAndUpdate(filter, update, {new: true})
+    }
+    catch(error){
+      return error;
+    }
+  }
 }
 module.exports = new LabelModel();

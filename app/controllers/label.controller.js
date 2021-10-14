@@ -10,7 +10,7 @@ class labelController{
               labelName: req.body.labelName
           }
           console.log(label)
-          const validate = validation.validate.validate(label);
+          const validate = validation.createValidate.validate(label);
           console.log(validate)
           if (validate.error){
             logger.error(validate.error);
@@ -102,6 +102,45 @@ class labelController{
             message: 'Internal server Error'
           });
         }
-      }
+    }
+
+    updateLabelById = async (req, res)=>{
+        try{
+          const label ={
+            labelId: req.params.labelId,
+            id: req.user.id,
+            labelName: req.body.labelName
+          }
+          const validate = validation.updateValidate.validate(label);
+          if (validate.error){
+            logger.error(validate.error);
+            return res.status(422).json({
+                success: false,
+                message: "validation failed", 
+            })
+          }
+          const data = await labelService.updateLabelById(label)
+          if (data.name){
+            logger.error("Label not updated")
+            return res.status(400).json({
+              message: "Label not updated",
+              success: false
+            });
+          }else{
+            logger.info("Label updated successfully")
+            return res.status(200).json({
+              message: 'Updated successfully',
+              success: true,
+              data: data
+            });
+          }
+        }
+        catch(error){
+          logger.error(error)
+          return res.status(500).json({
+            message: 'Internal server Error'
+          });
+        }
+    }
 }
 module.exports = new labelController();
