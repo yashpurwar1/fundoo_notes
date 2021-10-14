@@ -81,7 +81,7 @@ class labelController{
             labelId: req.params.labelId
           }
           const data = await labelService.getLabelById(ids)
-          if (data.name) {
+          if (data.name || data.length<=0) {
             logger.error("Incorrect LabelID")
             return res.status(400).json({
               message: "Incorrect LabelId",
