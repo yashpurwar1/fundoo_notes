@@ -23,8 +23,8 @@ class noteValidation{
     updateValidate = Joi.object({
         id: Joi.string(),
             //.required(),
-        noteId: Joi.string()
-            .required(),
+        noteId: Joi.string(),
+            //.required(),
         title: Joi.string()
           .required(),
         description: Joi.string().min(10)

@@ -320,69 +320,259 @@
                     }
                 }
             }
-        }
-    },
+        },
 
-    "definitions": {
-        "registerUser": {
-            "type": "object",
-            "properties": {
-                "firstName": {
-                    "type": "string"
-                },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                },
-                "password": {
-                    "type": "string"
-                }
+        "/createLabel": {
+            "post": {
+                "tags": ["CreateLabel"],
                 
-            }
-        },
-
-        "loginUser": {
-            "type": "object",
-            "properties": {
-                "email": {
-                    "type": "string"
-                },
-                "password": {
-                    "type": "string"
+                "description": "Create a New Label",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Create Label",
+                        "in": "body",
+                        "description": "Create a new Label",
+                        "schema": { 
+                            "$ref": "#/definitions/note-label"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "201": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
                 }
             }
         },
 
-        "forgotPassword": {
-            "type": "object",
-            "properties": {
-                "email": {
-                    "type": "string"
+        "/getLabel": {
+            "get": {
+                "tags": ["Get Labels"],
+                
+                "description": "Get all the Labels",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
                 }
             }
         },
 
-        "resetPassword": {
-            "type": "object",
-            "properties": {
-                "newPassword": {
-                    "type": "string"
+        "/getLabelById/{labelId}": {
+            "get": {
+                "tags": ["Get Labels By Id"],
+                
+                "description": "Get label for a particular id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "labelId",
+                        "in": "path",
+                        "description": "Enter id of the label",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
                 }
             }
         },
 
-        "note": {
-            "type": "object",
-            "properties": {
-                "title": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
+        "/updateLabelById/{labelId}": {
+            "put": {
+                "tags": ["Update Labels By Id"],
+                
+                "description": "Update label for a particular id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "labelId",
+                        "in": "path",
+                        "description": "Enter id of the label",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "Update Label",
+                        "in": "body",
+                        "description": "Enter the name you want to update",
+                        "schema": { 
+                            "$ref": "#/definitions/note-label"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "204": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+
+        "/deleteLabelById/{labelId}": {
+            "delete": {
+                "tags": ["Delete Label By Id"],
+                
+                "description": "Delete label for a particular id",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "labelId",
+                        "in": "path",
+                        "description": "Enter id of the label",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "202": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+
+        "definitions": {
+            "registerUser": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                    
+                }
+            },
+
+            "loginUser": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                }
+            },
+
+            "forgotPassword": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    }
+                }
+            },
+
+            "resetPassword": {
+                "type": "object",
+                "properties": {
+                    "newPassword": {
+                        "type": "string"
+                    }
+                }
+            },
+
+            "note-label": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
                 }
             }
         }
     }
-} 
+}

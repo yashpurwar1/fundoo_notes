@@ -1878,3 +1878,17 @@
 {"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-14T12:34:17.401Z"}
 {"level":"info","message":"Label fetched successfully","timestamp":"2021-10-14T12:34:20.414Z"}
 {"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-14T12:34:30.407Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-17T09:27:03.115Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-17T09:31:32.268Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-17T09:31:54.912Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-17T09:32:52.848Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-17T09:35:44.208Z"}
+{"code":"EDNS","command":"CONN","errno":-3008,"hostname":"smtp.gmail.com","level":"error","syscall":"getaddrinfo","timestamp":"2021-10-17T09:35:44.254Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-17T09:37:10.498Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-17T09:37:13.254Z"}
+{"code":"EDNS","command":"CONN","errno":-3008,"hostname":"smtp.gmail.com","level":"error","syscall":"getaddrinfo","timestamp":"2021-10-17T09:37:13.292Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-17T09:38:37.849Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-17T09:38:42.008Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-17T10:12:43.868Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-17T10:14:30.578Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-17T10:16:34.767Z"}
