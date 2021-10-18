@@ -512,6 +512,97 @@
             }
         },
 
+        "/addLabel/{noteId}/{labelId}": {
+            "post": {
+                "tags": ["Add label for note"],
+                
+                "description": "Add label for notes",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "noteId",
+                        "in": "path",
+                        "description": "Enter id of the note",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "labelId",
+                        "in": "path",
+                        "description": "Enter id of the label",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+        "/deleteLabel/{noteId}/{labelId}": {
+            "post": {
+                "tags": ["Delete label for note"],
+                
+                "description": "Delete label for notes",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Enter token recieved in login",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "noteId",
+                        "in": "path",
+                        "description": "Enter id of the note",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "labelId",
+                        "in": "path",
+                        "description": "Enter id of the label",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "401":{
+                        "description": "Unauthorized token"
+                    },
+                    "400": {
+                        "description": "Error"
+                    }
+                }
+            }
+        },
+
         "definitions": {
             "registerUser": {
                 "type": "object",
