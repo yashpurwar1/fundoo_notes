@@ -1,16 +1,13 @@
 {
-    "notes":{
-        "validNote":{
-            "title":"Testing title",
-            "description":"Testing description+++++"
+    "labels":{
+        "validLabel":{
+            "labelName":"Testing lable"
         },
-        "inValidNote":{
-            "title":"Testing title",
-            "description":"Testin"
+        "inValidLabel":{
+            "labelName":""
         },
-        "updatedNote":{
-            "title":"Testing title updated",
-            "description":"Testing description+++++ updated"
+        "updatedLabel":{
+            "labelName":"Testing label updated"
         }
     },
     "validToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJZYXNoIiwibGFzdE5hbWUiOiJQdXJ3YXIiLCJpZCI6IjYxNTk1NDE5OTBiYTAzMmU3OWNmODJlYiIsImlhdCI6MTYzNDA5NTQzOX0.cQbJSmAbYPb5pK7rxKX3o_2zkqcfxBF4WvA4jy3McRs",

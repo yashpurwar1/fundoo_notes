@@ -3,19 +3,19 @@ const chaiHttp = require('chai-http');
 const server = require('../server');
 
 chai.use(chaiHttp);
-const data = require('./noteData.json');
+const data = require('./labelData.json');
 
 chai.should();
 
-describe('createNote', () => {
-    it('givenValidTokenAndValiNoteShouldReturn201Status', (done) => {
+describe('createLabel', () => {
+    it('givenValidTokenAndValidLabelShouldReturn201Status', (done) => {
         const token = data.validToken;
-        const note = data.notes.validNote;
+        const label = data.labels.validLabel;
         chai
           .request(server)
-          .post('/createNote')
+          .post('/createLabel')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -25,14 +25,14 @@ describe('createNote', () => {
         });
     });
     
-    it('givenValidTokenAndInvaliNoteShouldReturn422Status', (done) => {
+    it('givenValidTokenAndInvalidLabelShouldReturn422Status', (done) => {
         const token = data.validToken;
-        const note = data.notes.inValidNote;
+        const label = data.labels.inValidLabel;
         chai
           .request(server)
-          .post('/createNote')
+          .post('/createLabel')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -42,14 +42,14 @@ describe('createNote', () => {
         });
     });
 
-    it('givenInvalidTokenAndValiNoteShouldReturn401Status', (done) => {
+    it('givenInvalidTokenAndValidLabelShouldReturn401Status', (done) => {
         const token = data.invalidToken;
-        const note = data.notes.validNote;
+        const label = data.labels.validLabel;
         chai
           .request(server)
-          .post('/createNote')
+          .post('/createLabel')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -60,12 +60,12 @@ describe('createNote', () => {
     });
 })
 
-describe('getNote', ()=>{
-    it('givenvalidTokenAndShouldReturn200Status', (done) => {
+describe('getLabel', ()=>{
+    it('givenValidTokenShouldReturn200Status', (done) => {
         const token = data.validToken;
         chai
           .request(server)
-          .get('/getNote')
+          .get('/getLabel')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -80,7 +80,7 @@ describe('getNote', ()=>{
         const token = data.invalidToken;
         chai
           .request(server)
-          .get('/getNote')
+          .get('/getLabel')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -92,12 +92,12 @@ describe('getNote', ()=>{
     });
 })
 
-describe('getNoteById',()=>{
-    it('givenvalidTokenAndNoteIdShouldReturn200Status', (done) => {
+describe('getLabelById',()=>{
+    it('givenvalidTokenAndLabelIdShouldReturn200Status', (done) => {
         const token = data.validToken;
         chai
           .request(server)
-          .get('/getNoteById/61654f6e497df29d16c8b5d4')
+          .get('/getLabelById/616d464fea49e4ebd713f878')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -108,11 +108,11 @@ describe('getNoteById',()=>{
         });
     });
 
-    it('giveninvalidTokenAndNoteIdShouldReturn401Status', (done) => {
+    it('giveninvalidTokenAndLabelIdShouldReturn401Status', (done) => {
         const token = data.invalidToken;
         chai
           .request(server)
-          .get('/getNoteById/61654f6e497df29d16c8b5d4')
+          .get('/getLabelById/6159541990ba032e79cf82eb')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -123,11 +123,11 @@ describe('getNoteById',()=>{
         });
     });
 
-    it('givenvalidTokenAndInvalidNoteIdShouldReturn400Status', (done) => {
+    it('givenvalidTokenAndInvalidLabelIdShouldReturn400Status', (done) => {
         const token = data.validToken;
         chai
           .request(server)
-          .get('/getNoteById/61654f6e497df29d16c8b5')
+          .get('/getLabelById/6159541990ba032e79cf82eb')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -139,15 +139,15 @@ describe('getNoteById',()=>{
     });
 })
 
-describe('updateNoteById',()=>{
-    it('givenValidTokenAndNoteIdShouldReturn201Status', (done) => {
+describe('updateLabelById',()=>{
+    it('givenValidTokenAndLabelIdShouldReturn200Status', (done) => {
         const token = data.validToken;
-        const note = data.notes.updatedNote
+        const label = data.labels.updatedLabel
         chai
           .request(server)
-          .put('/updateNoteById/61654f6e497df29d16c8b5d4')
+          .put('/updateLabelById/616d464fea49e4ebd713f878')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -159,12 +159,12 @@ describe('updateNoteById',()=>{
 
     it('givenInvalidTokenAndNoteIdShouldReturn401Status', (done) => {
         const token = data.invalidToken;
-        const note = data.notes.updatedNote
+        const label = data.labels.updatedLabel
         chai
           .request(server)
-          .put('/updateNoteById/61654f6e497df29d16c8b5d4')
+          .put('/updateLabelById/616d464fea49e4ebd713f878')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -174,14 +174,14 @@ describe('updateNoteById',()=>{
         });
     });
 
-    it('givenvalidTokenAndInvalidNoteIdShouldReturn400Status', (done) => {
+    it('givenvalidTokenAndInvalidLabelIdShouldReturn400Status', (done) => {
         const token = data.validToken;
-        const note = data.notes.updatedNote
+        const label = data.labels.updatedLabel
         chai
           .request(server)
-          .put('/updateNoteById/61654f6e497df29d16c8b5')
+          .put('/updateLabelById/6159541990ba032e7982eb')
           .set({ authorization: token })
-          .send(note)
+          .send(label)
           .end((error, res) => {
             if(error){
               return done(error);
@@ -192,12 +192,12 @@ describe('updateNoteById',()=>{
     });
 })
 
-describe('deleteNoteById', () =>{
-    it('givenvalidTokenAndNoteIdShouldReturn204Status', (done) => {
+describe('deleteLabelById', () =>{
+    it('givenvalidTokenAndLabelIdShouldReturn204Status', (done) => {
         const token = data.validToken;
         chai
           .request(server)
-          .delete('/deleteNoteById/61654f51497df29d16c8b5cd')
+          .delete('/deleteLabelById/616810f2d7e989948a4c767a')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -208,11 +208,11 @@ describe('deleteNoteById', () =>{
         });
     });
 
-    it('givenInvalidTokenAndNoteIdShouldReturn401Status', (done) => {
+    it('givenInvalidTokenAndLabelIdShouldReturn401Status', (done) => {
         const token = data.invalidToken;
         chai
           .request(server)
-          .delete('/deleteNoteById/61654f51497df29d16c8b5cd')
+          .delete('/deleteLabelById/616810f2d7e989948a4c767a')
           .set({ authorization: token })
           .end((error, res) => {
             if(error){

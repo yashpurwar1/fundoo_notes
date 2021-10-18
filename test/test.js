@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../server');
+const faker = require('faker');
 
 chai.use(chaiHttp);
 const data = require('./data.json');
@@ -11,6 +12,8 @@ describe('registartion', () => {
 
   it('givenRegistrationDetailsWhenCorrectShouldReturn201Status', (done) => {
     const registartionDetails = data.registration.correctRegister;
+    registartionDetails.email = faker.internet.email();
+    
     chai
       .request(server)
       .post('/register')
