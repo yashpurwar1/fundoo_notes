@@ -1,12 +1,15 @@
 const mongoose = require('mongoose')
 const labelSchema = mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    labelName: {
-        type: String
-    }
+  userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+  },
+  labelName: {
+      type: String
+  },
+  noteId: {
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'notes' }]
+  },
 },
 {
     timestamps: true
@@ -70,6 +73,14 @@ class LabelModel {
         return callback(null, data);
       }
     })
+  }
+
+  async addNoteId (ids) {
+    try {
+      return await Label.findByIdAndUpdate(ids.labelId, { $push: { noteId: ids.noteId } }, {new: true})
+    } catch (err) {
+      return err;
+    }
   }
 }
 module.exports = new LabelModel();

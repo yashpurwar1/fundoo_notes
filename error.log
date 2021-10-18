@@ -1115,3 +1115,27 @@
 {"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:14:07.213Z"}
 {"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:14:07.219Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:14:07.269Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-18T10:17:03.876Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-18T10:17:03.958Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-18T10:17:04.003Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-18T10:17:04.054Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-18T10:17:04.120Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T10:17:04.151Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-18T10:17:04.482Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.503Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.526Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.550Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.577Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:04.805Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:04.805Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-18T10:17:04.912Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.920Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.929Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:05.007Z"}
+{"level":"error","timestamp":"2021-10-18T12:34:37.226Z"}
+{"level":"error","timestamp":"2021-10-18T12:37:57.819Z"}
+{"level":"error","timestamp":"2021-10-18T12:38:41.483Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:39:30.050Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:42:52.581Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:43:09.697Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:43:31.611Z"}

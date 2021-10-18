@@ -49,5 +49,13 @@ class LabelService {
       }
     })
   }
+
+  async addNoteId (ids) {
+    try {
+      return await labelModel.addNoteId(ids);
+    } catch (err) {
+      return err;
+    }
+  }
 }
 module.exports = new LabelService();

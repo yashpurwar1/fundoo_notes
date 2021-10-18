@@ -1,17 +1,20 @@
 const mongoose = require('mongoose')
 const noteSchema = mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  labels: {
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'labels' }]
     },
-    title: {
-        type: String
-    },
-    description: {
-        type: String,
-        required: true,
-        minlength: 2
-    }
+  title: {
+    type: String
+  },
+  description: {
+    type: String,
+    required: true,
+    minlength: 2
+  }
 },
 {
     timestamps: true
@@ -79,5 +82,13 @@ class NoteModel {
     })
   }
 
+  addLabelById = async (ids) => {
+    try{
+      return await Notes.findByIdAndUpdate(ids.noteId, { $push: { labels: ids.labelId } }, {new: true})
+    }
+    catch(error){
+      return error;
+    }
+  }
 }
 module.exports = new NoteModel();

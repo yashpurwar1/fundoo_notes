@@ -1,6 +1,7 @@
 const { logger } = require('../../logger/logger.js');
 const noteService = require('../service/note.service');
 const validation = require('../utilities/noteValidation');
+const labelController = require('../controllers/label.controller')
 
 class NoteController{
   createNote = (req, res) => {
@@ -193,6 +194,38 @@ class NoteController{
       logger.error(error)
       return res.status(500).json({
         message: "Internal server error"
+      });
+    }
+  }
+
+  addLabelById = async (req, res)=>{
+    try{
+      const ids ={
+        noteId: req.params.noteId,
+        id: req.user.id,
+        labelId: req.body.labelId
+      }
+      const data = await noteService.addLabelById(ids)
+      const labelData = await labelController.addNoteId(ids)
+      if (data.name || labelData.name){
+        logger.error("Label not updated")
+        return res.status(400).json({
+          message: "Label not updated",
+          success: false
+        });
+      }else{
+        logger.info("Label updated successfully")
+        return res.status(200).json({
+          message: 'Updated successfully',
+          success: true,
+          data: data
+        });
+      }
+    }
+    catch(error){
+      logger.error(error)
+      return res.status(500).json({
+        message: 'Internal server Error'
       });
     }
   }

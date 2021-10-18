@@ -27,4 +27,6 @@ module.exports=(app) =>{
     app.get('/getLabelById/:labelId', helper.verifyToken, labelController.getLabelById);
     app.put('/updateLabelByID/:labelId', helper.verifyToken, labelController.updateLabelById);
     app.delete('/deleteLabelById/:labelId', helper.verifyToken, labelController.deleteLabelById);
+
+    app.post('/addlabel/:noteId', helper.verifyToken, noteController.addLabelById);
 }

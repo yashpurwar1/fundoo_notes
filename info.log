@@ -2128,3 +2128,223 @@
 {"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-18T10:14:07.249Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:14:07.269Z"}
 {"level":"info","message":"Password updated","timestamp":"2021-10-18T10:14:07.406Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T10:17:03.587Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-18T10:17:03.848Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-18T10:17:03.875Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-18T10:17:03.914Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-18T10:17:03.937Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-18T10:17:03.957Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-18T10:17:03.983Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-18T10:17:04.003Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-18T10:17:04.018Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-18T10:17:04.046Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-18T10:17:04.054Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-18T10:17:04.081Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T10:17:04.103Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-18T10:17:04.119Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T10:17:04.134Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T10:17:04.151Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-18T10:17:04.164Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-18T10:17:04.289Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-18T10:17:04.482Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.502Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.525Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.549Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.576Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-18T10:17:04.795Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:04.804Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:04.805Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-18T10:17:04.912Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.920Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-18T10:17:04.929Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-18T10:17:04.955Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-18T10:17:05.006Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-18T10:17:05.127Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-18T10:17:08.039Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T11:54:53.643Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T11:55:58.675Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-18T11:56:38.645Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T11:57:15.572Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T11:58:20.593Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:02:38.923Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:24.080Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:26.757Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:29.417Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:34.130Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:38.050Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:07:54.899Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:08:59.901Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:09:05.396Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:09:16.331Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:09:39.343Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:09:44.786Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:10:19.425Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:10:25.232Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:10:49.661Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:11:04.215Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:11:33.715Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:12:25.333Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:15:57.978Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T12:16:48.183Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:17:27.143Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:17:32.009Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:17:44.512Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:17:50.574Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:18:18.780Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:18:36.975Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:18:43.258Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:18:47.025Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:19:15.543Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:19:26.595Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:19:49.543Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:20:21.428Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:20:54.927Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:22:03.480Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:24:25.904Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:24:35.895Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:24:41.801Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:24:44.321Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-18T12:25:22.869Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T12:25:30.076Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:25:55.816Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:26:06.324Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:26:10.165Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:26:16.090Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:26:18.702Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:26:26.891Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:27:07.504Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:30:50.268Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:32:45.137Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:32:46.904Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:32:57.552Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:24.523Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:27.537Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:33.191Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:41.356Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:48.389Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:33:59.114Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:34:13.317Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:34:17.222Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:34:22.875Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:34:28.612Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:34:31.176Z"}
+{"level":"error","timestamp":"2021-10-18T12:34:37.225Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:35:22.248Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:35:24.371Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:35:33.161Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:35:36.441Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:35:59.651Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:36:06.166Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:36:08.943Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:36:13.980Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:37:13.125Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:37:18.030Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:37:25.299Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:37:34.769Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:37:50.640Z"}
+{"level":"error","timestamp":"2021-10-18T12:37:57.819Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:19.344Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:21.337Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:24.204Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:28.867Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:36.913Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:38:41.006Z"}
+{"level":"error","timestamp":"2021-10-18T12:38:41.481Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:39:04.294Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:39:28.916Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:39:30.050Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:39:53.254Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:39:55.968Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:40:13.754Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:40:17.285Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-18T12:40:45.309Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:42:41.479Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:42:52.581Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:43:07.612Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:43:09.696Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:43:27.814Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-18T12:43:31.611Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:43:44.606Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:43:49.596Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:45:16.136Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:45:17.284Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:47:54.132Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:47:58.057Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:50:36.352Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:50:40.475Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T12:50:54.989Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:51:07.241Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:51:27.726Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:51:31.848Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-18T12:51:51.605Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:54:10.526Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T12:54:27.471Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T12:54:46.337Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:59:00.163Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T12:59:33.574Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:00:03.662Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:00:43.611Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:00:47.452Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:02:42.578Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:02:49.102Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:02:55.271Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:03:45.177Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:03:48.353Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:04:45.407Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:04:52.151Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:05:01.955Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:05:21.033Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:05:30.671Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:05:34.668Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:06:45.501Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:07:22.006Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:07:30.918Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:07:43.924Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:07:47.040Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:08:23.925Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:08:29.159Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:08:34.168Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:08:46.180Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:10:03.938Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:10:16.705Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:10:23.045Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:10:31.999Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:10:37.010Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:11:25.970Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:11:28.447Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:12:23.582Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:12:31.674Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:14:10.042Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:14:10.888Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:15:53.443Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:15:56.314Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:16:21.940Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:16:27.842Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:17:01.174Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:17:59.106Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:18:03.828Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:18:07.775Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-18T13:18:36.183Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:21:17.525Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:21:23.350Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:21:45.798Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:22:25.234Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:29:25.224Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:29:39.361Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-18T13:29:45.514Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:30:52.950Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:30:58.237Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:03.642Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:06.936Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:16.070Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:21.094Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:27.542Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:30.361Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:38.706Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:31:41.089Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-18T13:32:11.250Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:32:42.246Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-18T13:32:57.173Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:33:32.182Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-18T13:34:07.643Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-18T13:34:30.190Z"}

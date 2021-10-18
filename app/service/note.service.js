@@ -52,5 +52,14 @@ class NoteService {
     })
   }
 
+  addLabelById = async (ids) => {
+    try{
+      return await noteModel.addLabelById(ids)
+    }
+    catch(error){
+      return error;
+    }
+  }
+
 }
 module.exports = new NoteService();
