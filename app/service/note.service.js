@@ -61,5 +61,14 @@ class NoteService {
     }
   }
 
+  deleteLabel = async (ids) => {
+    try {
+      const data = await noteModel.deleteLabel(ids);
+      return data;
+    } catch (error) {
+      return error;
+    }
+  }
+
 }
 module.exports = new NoteService();

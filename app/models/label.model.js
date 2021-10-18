@@ -82,5 +82,13 @@ class LabelModel {
       return err;
     }
   }
+
+  async deleteLabel (ids) {
+    try {
+      return await Label.findByIdAndUpdate(ids.labelId, { $pull: { noteId: ids.noteId } }, {new: true})
+    } catch (err) {
+      return err;
+    }
+  }
 }
 module.exports = new LabelModel();

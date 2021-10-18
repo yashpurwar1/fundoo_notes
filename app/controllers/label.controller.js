@@ -174,9 +174,17 @@ class labelController{
     }
   }
 
-  addNoteId = async (id) => {
+  addNoteId = async (ids) => {
     try {
-      const data = await labelService.addNoteId(id);
+      const data = await labelService.addNoteId(ids);
+      return data;
+    } catch (err) {
+      return err;
+    }
+  }
+  deleteLabel = async (ids) => {
+    try {
+      const data = await labelService.deleteLabel(ids);
       return data;
     } catch (err) {
       return err;

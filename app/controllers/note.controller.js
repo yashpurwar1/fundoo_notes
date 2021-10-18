@@ -203,8 +203,9 @@ class NoteController{
       const ids ={
         noteId: req.params.noteId,
         id: req.user.id,
-        labelId: req.body.labelId
+        labelId: req.params.labelId
       }
+      console.log(ids)
       const data = await noteService.addLabelById(ids)
       const labelData = await labelController.addNoteId(ids)
       if (data.name || labelData.name){
@@ -226,6 +227,37 @@ class NoteController{
       logger.error(error)
       return res.status(500).json({
         message: 'Internal server Error'
+      });
+    }
+  }
+
+  deleteLabel = async (req, res) => {
+    try {
+      const ids = {
+        labelId: req.params.labelId,
+        noteId: req.params.noteId,
+        userId: req.user.id
+      };
+      const data = await noteService.deleteLabel(ids);
+      const labelData = await labelController.deleteLabel(ids)
+      if(data.name || labelData.name){
+        logger.error("Label not deleted")
+        return res.status(400).json({
+          message: "Label not deletes",
+          success: false
+        });
+      }
+      else{
+        res.status(201).send({
+          message: 'Label deleted',
+          success: true
+        });
+      }
+    } catch (error) {
+      res.status(500).send({
+        message: 'Internal server error',
+        success: false,
+        error: error
       });
     }
   }

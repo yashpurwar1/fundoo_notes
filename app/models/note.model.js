@@ -90,5 +90,14 @@ class NoteModel {
       return error;
     }
   }
+
+  deleteLabel = async (ids) => {
+    try {
+      return await Notes.findByIdAndUpdate(ids.noteId, { $pull: { labels: ids.labelId } }, { new: true });
+    }
+    catch (error) {
+      return error;
+    }
+  }
 }
 module.exports = new NoteModel();

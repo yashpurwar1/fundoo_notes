@@ -57,5 +57,12 @@ class LabelService {
       return err;
     }
   }
+  async deleteLabel (ids) {
+    try {
+      return await labelModel.deleteLabel(ids);
+    } catch (err) {
+      return err;
+    }
+  }
 }
 module.exports = new LabelService();
