@@ -1,7 +1,7 @@
 const { logger } = require('../../logger/logger.js');
 const labelService = require('../service/label.service');
 const validation = require('../utilities/labelValidation');
-
+const redis = require('../utilities/redis')
 class labelController{
   createLabel = (req, res) => {
     try{
@@ -89,6 +89,7 @@ class labelController{
         });
       } else {
         logger.info("Label fetched successfully")
+        redis.setCache(ids.labelId, 600, JSON.stringify(data));
         return res.status(200).json({
           message: 'Fetched successfully',
           success: true,
@@ -128,6 +129,7 @@ class labelController{
         });
       }else{
         logger.info("Label updated successfully")
+        redis.clearCache(label.labelId)
         return res.status(200).json({
           message: 'Updated successfully',
           success: true,
@@ -158,6 +160,7 @@ class labelController{
           })
         }else{
           logger.info("Label deleted successfully")
+          redis.clearCache(ids.labelId)
           return res.status(204).json({
             message: "Label Deleted successfully",
             data: data,

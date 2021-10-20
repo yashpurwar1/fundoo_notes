@@ -6,6 +6,7 @@
  */
 
 const helper = require('../utilities/helper')
+const redis = require('../utilities/redis')
 const controller = require('../controllers/user.controller.js');
 const noteController = require('../controllers/note.controller')
 const labelController = require('../controllers/label.controller')
@@ -18,13 +19,13 @@ module.exports=(app) =>{
     //Api route for notes 
     app.post('/createNote', helper.verifyToken, noteController.createNote);
     app.get('/getNote', helper.verifyToken, noteController.getNote);
-    app.get('/getNoteById/:noteId', helper.verifyToken, noteController.getNoteById);
+    app.get('/getNoteById/:noteId', helper.verifyToken, redis.getNoteById, noteController.getNoteById);
     app.put('/updateNoteByID/:noteId', helper.verifyToken, noteController.updateNoteById);
     app.delete('/deleteNoteById/:noteId', helper.verifyToken, noteController.deleteNoteById);
     //Api routes for label
     app.post('/createLabel', helper.verifyToken, labelController.createLabel);
     app.get('/getLabel', helper.verifyToken, labelController.getLabel);
-    app.get('/getLabelById/:labelId', helper.verifyToken, labelController.getLabelById);
+    app.get('/getLabelById/:labelId', helper.verifyToken, redis.getLabelById, labelController.getLabelById);
     app.put('/updateLabelByID/:labelId', helper.verifyToken, labelController.updateLabelById);
     app.delete('/deleteLabelById/:labelId', helper.verifyToken, labelController.deleteLabelById);
 

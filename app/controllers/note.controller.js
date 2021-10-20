@@ -2,6 +2,7 @@ const { logger } = require('../../logger/logger.js');
 const noteService = require('../service/note.service');
 const validation = require('../utilities/noteValidation');
 const labelController = require('../controllers/label.controller')
+const redis = require('../utilities/redis')
 
 class NoteController{
   createNote = (req, res) => {
@@ -104,6 +105,7 @@ class NoteController{
         });
       } else {
         logger.info("Note fetched successfully")
+        redis.setCache(ids.noteId, 600, JSON.stringify(data));
         return res.status(200).json({
           message: 'Fetched successfully',
           success: true,
@@ -114,7 +116,7 @@ class NoteController{
     catch(error){
       logger.error(error)
       return res.status(500).json({
-        message: 'Internal server Error'
+        message: 'Internal server Error from note controller'
       });
     }
   }
@@ -144,6 +146,7 @@ class NoteController{
         });
       }else{
         logger.info("Note updated successfully")
+        redis.clearCache(nate.noteId)
         return res.status(200).json({
           message: 'Updated successfully',
           success: true,
@@ -182,6 +185,7 @@ class NoteController{
           })
         }else{
           logger.info("Note deleted successfully")
+          redis.clearCache(ids.noteId)
           return res.status(204).json({
             message: "Note Deleted successfully",
             data: data,

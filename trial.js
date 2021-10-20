@@ -20,4 +20,10 @@ const student = {
 //const student1 = Object.assign(basicDetail, address)
 console.log(student)
 
+const arr = [1]
+for(let i=0; i<=499; i++){
+    arr[i]=i+1;
+}
+let sum = arr.reduce((a, b) => a+b)
 
+console.log(sum)
