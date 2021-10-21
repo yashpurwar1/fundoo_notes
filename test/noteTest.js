@@ -145,7 +145,7 @@ describe('updateNoteById',()=>{
         const note = data.notes.updatedNote
         chai
           .request(server)
-          .put('/updateNoteById/61654f6e497df29d16c8b5d4')
+          .put('/updateNoteById/61654f6f497df29d16c8b5d6')
           .set({ authorization: token })
           .send(note)
           .end((error, res) => {

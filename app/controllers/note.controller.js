@@ -146,7 +146,7 @@ class NoteController{
         });
       }else{
         logger.info("Note updated successfully")
-        redis.clearCache(nate.noteId)
+        redis.clearCache(note.noteId)
         return res.status(200).json({
           message: 'Updated successfully',
           success: true,
@@ -178,12 +178,21 @@ class NoteController{
       }
       noteService.deleteNoteById(ids, (error, data) => {
         if(error){
+          console.log("Error Is", error)
           logger.error(error)
           return res.status(400).json({
             message: error,
             success: false
           })
+        }else if (data == null){
+          logger.error(error)
+          return res.status(400).json({
+            message: "Incorrect noteId or already deleted",
+            success: false
+          })
         }else{
+          console.log("Data is", data)
+
           logger.info("Note deleted successfully")
           redis.clearCache(ids.noteId)
           return res.status(204).json({

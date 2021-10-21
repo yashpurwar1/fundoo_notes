@@ -158,6 +158,12 @@ class labelController{
             message: error,
             success: false
           })
+        }else if (data == null){
+          logger.error(error)
+          return res.status(400).json({
+            message: "Incorrect labelId or already deleted",
+            success: false
+          })
         }else{
           logger.info("Label deleted successfully")
           redis.clearCache(ids.labelId)
