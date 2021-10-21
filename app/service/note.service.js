@@ -70,5 +70,13 @@ class NoteService {
     }
   }
 
+  async noteCollaborator (data) {
+    try {
+      const user = noteModel.noteCollaborator(data);
+      return user;
+    } catch (error) {
+      return error;
+    }
+  }
 }
 module.exports = new NoteService();

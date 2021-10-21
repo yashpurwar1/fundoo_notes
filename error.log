@@ -1254,3 +1254,6 @@
 {"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-20T19:09:57.393Z"}
 {"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-20T19:09:57.401Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-20T19:09:57.454Z"}
+{"code":"EDNS","command":"CONN","errno":-3008,"hostname":"smtp.gmail.com","level":"error","syscall":"getaddrinfo","timestamp":"2021-10-21T06:45:34.092Z"}
+{"code":"EAUTH","command":"AUTH PLAIN","level":"error","response":"535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials y1sm5791299pfo.104 - gsmtp","responseCode":535,"timestamp":"2021-10-21T10:32:11.099Z"}
+{"code":"EAUTH","command":"AUTH PLAIN","level":"error","response":"535-5.7.8 Username and Password not accepted. Learn more at\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials a10sm4874353pgw.25 - gsmtp","responseCode":535,"timestamp":"2021-10-21T10:32:31.494Z"}

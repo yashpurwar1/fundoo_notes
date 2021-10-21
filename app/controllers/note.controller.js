@@ -274,6 +274,34 @@ class NoteController{
       });
     }
   }
+
+  noteCollaborator = async (req, res) => {
+    try {
+      const data = {
+        noteId: req.params.id,
+        userId: req.user.id,
+        collabEmail: req.body.collabEmail
+      };
+      redis.clearCache(data.noteId)
+      const user = noteService.noteCollaborator(data);
+      if(user.name){
+        res.status(400).send({
+          success: false,
+          message: 'error occured'
+        });
+      }else{
+        res.status(204).send({
+          success: true,
+          message: 'Collab Email Added Into Note',
+        });
+      }
+    } catch (error) {
+      res.status(500).send({
+        success: false,
+        message: 'Internal error'
+      });
+    }
+  }
 }
 
 module.exports = new NoteController();

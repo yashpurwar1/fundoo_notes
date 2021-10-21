@@ -1,3 +1,4 @@
+const userModel = require('../models/user.model')
 const mongoose = require('mongoose')
 const noteSchema = mongoose.Schema({
   userId: {
@@ -6,7 +7,10 @@ const noteSchema = mongoose.Schema({
   },
   labels: {
     type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'labels' }]
-    },
+  },
+  collaborator: {
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
+  },
   title: {
     type: String
   },
@@ -96,6 +100,31 @@ class NoteModel {
       return await Notes.findByIdAndUpdate(ids.noteId, { $pull: { labels: ids.labelId } }, { new: true });
     }
     catch (error) {
+      return error;
+    }
+  }
+
+  async noteCollaborator (data) {
+    try {
+      
+     const details= {
+        email: data.collabEmail
+      }
+      await userModel.findEmail(details, (err, userData) => {
+        if(userData){
+          Notes.findByIdAndUpdate(data.noteId, { $push: { collaborator: userData._id } }, { new: true } ,(err, updatedData)=>{
+            if (updatedData){
+              return updatedData;
+            }
+            else{
+              return "Not able to update"
+            }
+          });
+        }else{
+          return "Collab user not registered"
+        }
+      });
+    } catch (error) {
       return error;
     }
   }
