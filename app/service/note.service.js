@@ -70,10 +70,15 @@ class NoteService {
     }
   }
 
-  async noteCollaborator (data) {
+  noteCollaborator = (data, callback)=> {
     try {
-      const user = noteModel.noteCollaborator(data);
-      return user;
+      noteModel.noteCollaborator(data, (err, updateData)=>{
+        if(err){
+          return callback(err, null)
+        }else{
+          return callback(null, updateData)
+        }
+      }) ;
     } catch (error) {
       return error;
     }

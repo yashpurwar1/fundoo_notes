@@ -6,10 +6,12 @@ const noteSchema = mongoose.Schema({
     ref: 'User'
   },
   labels: {
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'labels' }]
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'labels' }],
+    unique: true
   },
   collaborator: {
-    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'labels' }],
+    unique: true
   },
   title: {
     type: String
@@ -104,24 +106,31 @@ class NoteModel {
     }
   }
 
-  async noteCollaborator (data) {
+  noteCollaborator(data, callback) {
     try {
-      
-     const details= {
+      const email= {
         email: data.collabEmail
       }
-      await userModel.findEmail(details, (err, userData) => {
+      userModel.findEmail(email, (err, userData) => {
         if(userData){
-          Notes.findByIdAndUpdate(data.noteId, { $push: { collaborator: userData._id } }, { new: true } ,(err, updatedData)=>{
+          Notes.findOne({_id: data.noteId}, (err, note)=>{
+            const collab = note.collaborator;
+            for(let i=0; i<collab.length; i++){
+              if(collab[i] == userData.id){
+                return callback("User already collabrated", null)
+              }
+            }
+            });
+          Notes.findByIdAndUpdate(data.noteId, { $push: { collaborator: userData.id } }, { new: true } ,(err, updatedData)=>{
             if (updatedData){
-              return updatedData;
+              return callback(null, updatedData);
             }
             else{
-              return "Not able to update"
+              return callback("Not able to update", null)
             }
           });
         }else{
-          return "Collab user not registered"
+          return callback("Collab user not registered", null)
         }
       });
     } catch (error) {

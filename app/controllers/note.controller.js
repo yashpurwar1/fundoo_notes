@@ -275,26 +275,27 @@ class NoteController{
     }
   }
 
-  noteCollaborator = async (req, res) => {
+  noteCollaborator = (req, res) => {
     try {
       const data = {
-        noteId: req.params.id,
+        noteId: req.params.noteId,
         userId: req.user.id,
         collabEmail: req.body.collabEmail
       };
       redis.clearCache(data.noteId)
-      const user = noteService.noteCollaborator(data);
-      if(user.name){
-        res.status(400).send({
-          success: false,
-          message: 'error occured'
-        });
-      }else{
-        res.status(204).send({
-          success: true,
-          message: 'Collab Email Added Into Note',
-        });
-      }
+      noteService.noteCollaborator(data, (err, data)=> {
+        if(err){
+          return res.status(400).json({
+            message: err,
+            status: false
+          })
+        }else{
+          return res.status(200).json({
+            message: data,
+            status: true
+          })
+        }
+      });
     } catch (error) {
       res.status(500).send({
         success: false,

@@ -32,5 +32,5 @@ module.exports=(app) =>{
     app.post('/addLabel/:noteId/:labelId', helper.verifyToken, noteController.addLabelById);
     app.post('/deleteLabel/:noteId/:labelId', helper.verifyToken, noteController.deleteLabel);
 
-    app.post('/notecollaborator/:id', helper.verifyToken, noteController.noteCollaborator);
+    app.post('/notecollaborator/:noteId', helper.verifyToken, noteController.noteCollaborator);
 }
