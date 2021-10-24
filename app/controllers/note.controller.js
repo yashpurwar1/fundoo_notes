@@ -283,12 +283,13 @@ class NoteController{
         if(err){
           return res.status(400).json({
             message: err,
-            status: false
+            success: false
           })
         }else{
           return res.status(200).json({
-            message: data,
-            status: true
+            message: "collabrated successfully",
+            data: data,
+            success: true
           })
         }
       });

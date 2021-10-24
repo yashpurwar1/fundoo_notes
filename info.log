@@ -4689,3 +4689,462 @@
 {"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:09:45.052Z"}
 {"level":"info","message":"Password updated","timestamp":"2021-10-24T10:09:45.167Z"}
 {"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:09:48.678Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:16:02.193Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:16:02.311Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:16:02.335Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:16:02.385Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:16:02.423Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:16:02.447Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:16:02.469Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:16:02.493Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:16:02.507Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:16:02.541Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:16:02.552Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:16:02.595Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-24T10:16:02.625Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:16:02.645Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:16:02.664Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:16:02.682Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:16:02.843Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:16:02.875Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:16:02.888Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:16:03.049Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:16:03.060Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:16:03.076Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:16:03.085Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:16:03.210Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:16:03.313Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.322Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.331Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.343Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.351Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:16:03.484Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:16:03.494Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:16:03.494Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:16:03.599Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.607Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:16:03.615Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:16:03.637Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:16:03.656Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:16:03.769Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:16:07.186Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:29:37.209Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:29:37.321Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:29:37.343Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:29:37.389Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:29:37.419Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:29:37.438Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:29:37.458Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:29:37.479Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:29:37.495Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:29:37.526Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:29:37.538Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:29:37.576Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-24T10:29:37.605Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:29:37.623Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:29:37.876Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:29:37.913Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:29:38.008Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:29:38.034Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:29:38.046Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:29:38.079Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:29:38.088Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:29:38.122Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:29:38.131Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:29:38.248Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:29:38.350Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.357Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.368Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.375Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.385Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:29:38.498Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:29:38.508Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:29:38.508Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:29:38.614Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.620Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:29:38.626Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:29:38.649Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:29:38.665Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:29:38.792Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:29:42.566Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:30:24.317Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:30:24.431Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:30:24.455Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:30:24.499Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:30:24.523Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:30:24.543Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:30:24.568Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:24.588Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:30:24.606Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:30:24.645Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:30:24.653Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:30:24.697Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:30:24.734Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:30:24.754Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:30:24.777Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:30:25.096Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:25.123Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:25.134Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:30:25.249Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:30:25.259Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:30:25.299Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:30:25.306Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:30:25.417Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:30:25.518Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.529Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.536Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.544Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.552Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:30:25.659Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:25.668Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:25.668Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:30:25.768Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.774Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:25.780Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:30:25.801Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:25.833Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:30:25.940Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:30:29.924Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:30:54.801Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:30:54.914Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:30:54.936Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:30:54.980Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:30:55.013Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:30:55.033Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:30:55.057Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:55.079Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:30:55.093Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:30:55.379Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:30:55.397Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:30:55.441Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:30:55.483Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:30:56.001Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:30:56.034Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:30:56.190Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:56.219Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:30:56.233Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:30:56.266Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:30:56.274Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:30:56.307Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:30:56.316Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:30:56.432Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:30:56.534Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.545Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.551Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.560Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.569Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:30:56.675Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:56.682Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:56.683Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:30:56.784Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.791Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:30:56.797Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:30:56.818Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:30:56.834Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:30:56.944Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:31:00.961Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:32:42.575Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:32:42.705Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:32:42.728Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:32:42.790Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:32:42.819Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:32:42.851Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:32:42.889Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:32:42.923Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:32:42.952Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:32:43.038Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:32:43.049Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:32:43.091Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:32:43.133Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:32:43.209Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:32:43.226Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:32:43.299Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:32:43.317Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:32:43.328Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:32:43.367Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:32:43.378Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:32:43.444Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:32:43.453Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:32:43.584Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:32:43.697Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.704Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.711Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.719Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.729Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:32:43.843Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:32:43.853Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:32:43.855Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:32:43.965Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.971Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:32:43.977Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:32:44.004Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:32:44.048Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:32:44.161Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:32:47.880Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:33:44.531Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:33:44.641Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:33:44.666Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:33:44.707Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:33:44.735Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:33:44.755Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:33:44.776Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:33:44.796Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:33:44.818Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:33:44.887Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:33:44.896Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:33:44.935Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:33:44.972Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:33:45.151Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:33:45.187Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:33:45.310Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:33:45.347Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:33:45.357Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:33:45.393Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:33:45.404Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:33:45.456Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:33:45.466Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:33:45.580Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:33:45.685Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.691Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.699Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.705Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.715Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:33:45.818Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:33:45.828Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:33:45.828Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:33:45.928Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.935Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:33:45.940Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:33:45.963Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:33:45.994Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:33:46.109Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:33:48.993Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:34:16.193Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:34:16.305Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:34:16.329Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:34:16.371Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:34:16.405Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:34:16.428Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:34:16.451Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:34:16.471Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:34:16.485Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:34:16.748Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:34:16.762Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:34:16.798Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:34:16.840Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:34:16.871Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:34:16.890Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:34:17.262Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:34:17.298Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:34:17.312Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:34:17.387Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:34:17.399Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:34:17.438Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:34:17.448Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:34:17.563Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:34:17.664Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.674Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.683Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.691Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.701Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:34:17.806Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:34:17.814Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:34:17.815Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:34:17.916Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.922Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:34:17.931Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:34:17.953Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:34:17.970Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:34:18.096Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:34:21.927Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:35:36.973Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:35:37.109Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:35:37.132Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:35:37.176Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:35:37.207Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:35:37.228Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:35:37.253Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:35:37.277Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:35:37.297Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:35:37.359Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:35:37.369Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:35:37.410Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:35:37.456Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:35:37.645Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:35:37.679Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:35:37.781Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:35:37.824Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:35:37.836Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:35:37.874Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:35:37.882Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:35:37.942Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:35:37.949Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:35:38.068Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:35:38.179Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.186Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.194Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.201Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.211Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:35:38.324Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:35:38.332Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:35:38.332Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:35:38.433Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.440Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:35:38.445Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:35:38.466Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:35:38.482Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:35:38.593Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:35:42.561Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:37:51.261Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:39:18.247Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:39:18.359Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:39:18.380Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:39:18.427Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:39:18.451Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:39:18.471Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:39:18.494Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:39:18.515Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:39:18.530Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:39:18.619Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:39:18.641Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:39:18.682Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:39:18.724Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:39:18.743Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:39:18.760Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:39:18.997Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:39:19.023Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:39:19.034Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:39:19.068Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:39:19.077Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:39:19.159Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:39:19.166Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:39:19.283Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:39:19.392Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.398Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.406Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.412Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.419Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:39:19.525Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:39:19.532Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:39:19.533Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:39:19.633Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.639Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:39:19.645Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:39:19.668Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:39:19.700Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:39:19.804Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:39:23.674Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:40:17.604Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:40:17.715Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:40:17.736Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:40:17.778Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:40:17.806Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:40:17.825Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:40:17.847Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:17.886Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:40:17.910Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:40:18.140Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:40:18.164Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:40:18.201Z"}
+{"level":"info","message":"Note fetched successfully","timestamp":"2021-10-24T10:40:18.221Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:40:18.233Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:40:18.243Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:40:18.261Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:40:18.420Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:18.446Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:18.461Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:40:19.042Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:40:19.055Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:40:19.103Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:40:19.111Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:40:19.227Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:40:19.335Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.341Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.347Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.355Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.361Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:40:19.468Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:19.476Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:19.476Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:40:19.578Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.584Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:19.590Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:40:19.611Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:19.627Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:40:19.737Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:40:23.855Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:40:44.019Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:40:44.140Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:40:44.164Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:40:44.208Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:40:44.236Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:40:44.257Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:40:44.279Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:44.302Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:40:44.319Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:40:44.353Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:40:44.361Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:40:44.405Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:40:44.451Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:40:44.638Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:40:44.688Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:40:44.786Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:44.808Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:40:44.820Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:40:44.854Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:40:44.862Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:40:44.904Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:40:44.912Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:40:45.026Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:40:45.133Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.139Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.146Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.153Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.159Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:40:45.263Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:45.271Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:45.271Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:40:45.370Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.376Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:40:45.384Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:40:45.404Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:40:45.422Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:40:45.529Z"}
+{"level":"info","message":"email has been sent","timestamp":"2021-10-24T10:40:49.547Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:42:30.845Z"}
+{"level":"info","message":"Label created successfully","timestamp":"2021-10-24T10:42:30.979Z"}
+{"_original":{"id":"6159541990ba032e79cf82eb","labelName":""},"details":[{"context":{"key":"labelName","label":"labelName","value":""},"message":"\"labelName\" is not allowed to be empty","path":["labelName"],"type":"string.empty"}],"level":"error","timestamp":"2021-10-24T10:42:31.002Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:42:31.053Z"}
+{"level":"info","message":"Label fetched successfully","timestamp":"2021-10-24T10:42:31.082Z"}
+{"level":"error","message":"Incorrect LabelID","timestamp":"2021-10-24T10:42:31.102Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:42:31.125Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:42:31.145Z"}
+{"level":"info","message":"Label deleted successfully","timestamp":"2021-10-24T10:42:31.162Z"}
+{"level":"info","message":"Note created successfully","timestamp":"2021-10-24T10:42:31.658Z"}
+{"_original":{"description":"Testin","id":"6159541990ba032e79cf82eb","title":"Testing title"},"details":[{"context":{"key":"description","label":"description","limit":10,"value":"Testin"},"message":"\"description\" length must be at least 10 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-10-24T10:42:31.680Z"}
+{"level":"info","message":"Data fetched successfully","timestamp":"2021-10-24T10:42:31.762Z"}
+{"level":"error","message":"Incorrect noteID","timestamp":"2021-10-24T10:42:31.829Z"}
+{"level":"info","message":"Note updated successfully","timestamp":"2021-10-24T10:42:31.860Z"}
+{"level":"error","message":"Note not updated","timestamp":"2021-10-24T10:42:31.892Z"}
+{"level":"info","message":"Label updated successfully","timestamp":"2021-10-24T10:42:32.185Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:42:32.234Z"}
+{"level":"error","message":"Label not updated","timestamp":"2021-10-24T10:42:32.251Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:42:32.754Z"}
+{"level":"error","message":"Label not deleted","timestamp":"2021-10-24T10:42:32.788Z"}
+{"level":"info","message":"Note deleted successfully","timestamp":"2021-10-24T10:42:32.937Z"}
+{"level":"error","message":"Not able to find the note","timestamp":"2021-10-24T10:42:32.951Z"}
+{"level":"info","message":"User Registered","timestamp":"2021-10-24T10:42:33.119Z"}
+{"level":"error","message":"Email already registered","timestamp":"2021-10-24T10:42:33.218Z"}
+{"_original":{"firstName":"Yash","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.225Z"}
+{"_original":{"email":"yash19@gmail.com","lastName":"Purwar","password":"yash76652"},"details":[{"context":{"key":"firstName","label":"firstName"},"message":"\"firstName\" is required","path":["firstName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.231Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","password":"yash76652"},"details":[{"context":{"key":"lastName","label":"lastName"},"message":"\"lastName\" is required","path":["lastName"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.237Z"}
+{"_original":{"email":"yash13@gmail.com","firstName":"Yash","lastName":"Purwar"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.246Z"}
+{"level":"info","message":"Login Success","timestamp":"2021-10-24T10:42:33.348Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:42:33.356Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:42:33.356Z"}
+{"level":"error","message":"Invalid password","timestamp":"2021-10-24T10:42:33.453Z"}
+{"_original":{"email":"yash16@gmail.com"},"details":[{"context":{"key":"password","label":"password"},"message":"\"password\" is required","path":["password"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.459Z"}
+{"_original":{"password":"yash76652000"},"details":[{"context":{"key":"email","label":"email"},"message":"\"email\" is required","path":["email"],"type":"any.required"}],"level":"error","timestamp":"2021-10-24T10:42:33.465Z"}
+{"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:42:33.486Z"}
+{"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:42:33.503Z"}
+{"level":"info","message":"Password updated","timestamp":"2021-10-24T10:42:33.609Z"}

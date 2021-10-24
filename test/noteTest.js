@@ -359,6 +359,63 @@ describe('delete Label to NoteId', () =>{
 });
 
 
+describe('Add note Collabrater in NoteId', () =>{
+  it('givenvalidToken_NoteId_collabaraterId_ShouldReturn200Status', (done) => {
+      const token = data.validToken;
+      chai
+        .request(server)
+        .post(`/notecollaborator/${delIds.noteId}`)
+        .set({ authorization: token })
+        .send({collabEmail: "yapurwar@gmail.com"})
+        .end((error, res) => {
+          if(error){
+            return done(error);
+          }
+          res.should.have.status(200);
+          res.body.should.have.property("success").eql(true);
+          res.body.should.have.property("message").eql("collabrated successfully");
+          done();
+      });
+  });
+
+  it('givenvalidToken_NoteId_DuplicateCollabaraterId_ShouldReturn400Status', (done) => {
+      const token = data.validToken;
+      chai
+        .request(server)
+        .post(`/notecollaborator/${delIds.noteId}`)
+        .set({ authorization: token })
+        .send({collabEmail: "yapwar@gmail.com"})
+        .end((error, res) => {
+          if(error){
+            return done(error);
+          }
+          res.should.have.status(400);
+          res.body.should.have.property("success").eql(false);
+          res.body.should.have.property("message").eql("Collab user not registered");
+          done();
+      });
+  });
+
+  it('givenInvalidToken_NoteId_collabaraterId_ShouldReturn401Status', (done) => {
+    const token = data.invalidToken;
+    chai
+      .request(server)
+      .post(`/notecollaborator/${delIds.noteId}`)
+      .set({ authorization: token })
+      .send({collabEmail: "yapurwar@gmail.com"})
+      .end((error, res) => {
+        if(error){
+          return done(error);
+        }
+        res.should.have.status(401);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Unauthorized Token or token expired");
+        done();
+    });
+  });
+});
+
+
 describe('deleteNoteById', () =>{
     it('givenvalidTokenAndNoteIdShouldReturn204Status', (done) => {
         const token = data.validToken;
