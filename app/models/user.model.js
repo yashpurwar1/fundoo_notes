@@ -8,7 +8,9 @@
  const mongoose = require('mongoose');
  const helper = require('../utilities/helper.js');
  const { logger } = require('../../logger/logger.js');
+ 
  const userSchema = mongoose.Schema({
+    googleId: { type: String },
      firstName: {
          type: String,
          required: true
@@ -24,9 +26,10 @@
      },
      password: {
          type: String,
-         required: true,
          minlength: 5
-     }
+     },
+     googleLogin: { type: Boolean }
+   
  },
      {
          timestamps: true
@@ -65,45 +68,74 @@
          });
      }
  
-     /**
-      * @description:    Login user from the database
-      * @param:          loginData 
-      * @param:          callback for service
-      */
- 
-     findEmail = (loginData, callBack) => {
-         user.findOne({ email: loginData.email }, (error, data) => {
-             if (data) {
-                 return callBack(null, data);           
-             } else{
-                 return callBack("Invalid email", null);
-             }
-         });
-     }
-     resetPassword = (newUser, callback) =>{
-        user.findOne({email: newUser.email }, (error, data) =>{
-             if(error){
-                 return callback("No user found with following email", null)
+    /**
+     * @description:    Finds email in the database
+     * @param:          findEmail 
+     * @param:          callback for service
+     */
+    findEmail = (loginData, callBack) => {
+        user.findOne({ email: loginData.email }, (error, data) => {
+            if (data) {
+                return callBack(null, data);           
+            } else{
+                return callBack("Invalid email", null);
             }
-             else{
-                 helper.passwordHash(newUser.newPassword, (err, hash) => {
-                     if (hash) {
-                         const updatedPassword = hash;
-                         user.updateOne({"_id": data._id}, {"password": updatedPassword}, (error, data) => {
-                             if(data.acknowledged == true){
-                                 return callback (null, "Updated successfully")
-                             }
-                             else{
-                                 return callback ("Error in updating", null)
-                             }
-                         })
-                     }
-                     else{
-                         return callback ("Error in hash on password", null)
-                     }
-                 })
-             }
-         })
-     }
+        });
+    }
+
+    /**
+     * @description:    Reset the password of the user
+     * @param:          resetPassword
+     * @param:          user and callback for service
+     */
+    resetPassword = (newUser, callback) =>{
+        user.findOne({email: newUser.email }, (error, data) =>{
+            if(error){
+                return callback("No user found with following email", null)
+            }else{
+                helper.passwordHash(newUser.newPassword, (err, hash) => {
+                    if (hash) {
+                        const updatedPassword = hash;
+                        user.updateOne({"_id": data._id}, {"password": updatedPassword}, (error, data) => {
+                            if(data.acknowledged == true){
+                                return callback (null, "Updated successfully")
+                            }
+                            else{
+                                return callback ("Error in updating", null)
+                            }
+                        })
+                    }
+                    else{
+                        return callback ("Error in hash on password", null)
+                    }
+                })
+            }
+        })
+    }
+
+    socialLogin = async (userData) => {
+        return await user.findOne({ email: userData.email }).then(data => {
+            if (data !== null) {
+                return data;
+            } else {
+                const data = new user({
+                    firstName: userData.firstName,
+                    lastName: userData.lastName,
+                    email: userData.email,
+                    password: userData.password,
+                    googleId: userData.googleId,
+                    googleLogin: userData.googleLogin
+                });
+                const datauser = async () => {
+                    await data.save();
+                };
+                datauser();
+                return data;
+            }
+        }).catch(err => {
+          return ('Something went wrong', err);
+        });
+    };
+
  }
  module.exports = new userModel();

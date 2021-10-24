@@ -190,5 +190,31 @@ class Controller {
             })
         }
     }
+
+    socialLogin = (req, res) => {
+        const googleProfile = req.user.profile;
+        const googleInfo = {
+          firstName: googleProfile.name.givenName,
+          lastName: googleProfile.name.familyName,
+          email: googleProfile.emails[0].value,
+          password: null,
+          googleId: googleProfile.id,
+          googleLogin: true
+        };
+        userService.socialLogin(googleInfo)
+        .then((data) => {
+          return res.status(200).send({
+              success: true,
+              message: 'Login Successful',
+              token: data
+            });
+        })
+        .catch(() => {
+            return res.status(500).send({
+                success: false,
+                message: "Login Failed"
+            });
+        });
+    };
 }
 module.exports = new Controller();

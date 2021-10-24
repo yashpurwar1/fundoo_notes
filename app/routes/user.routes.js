@@ -10,6 +10,8 @@ const redis = require('../utilities/redis')
 const controller = require('../controllers/user.controller.js');
 const noteController = require('../controllers/note.controller')
 const labelController = require('../controllers/label.controller')
+const passport = require('passport');
+require('../utilities/auth');
 module.exports=(app) =>{  
     //Api route for user
     app.post('/register',controller.register);
@@ -33,4 +35,8 @@ module.exports=(app) =>{
     app.post('/deleteLabel/:noteId/:labelId', helper.verifyToken, noteController.deleteLabel);
     // Api route for note collaborater
     app.post('/notecollaborator/:noteId', helper.verifyToken, noteController.noteCollaborator);
+
+    app.get('/failed', (req, res) => res.send('You Have Failed To Login...!!!'));
+    app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+    app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }), helper.tokenAuthentication, controller.socialLogin);
 }

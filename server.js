@@ -5,9 +5,11 @@ const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger/swagger.json');
 const { logger } = require('./logger/logger');
+const passport = require('passport');
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }))
+app.use(require('cookie-parser')());
 
 // parse requests of content-type - application/json
 app.use(express.json())
@@ -19,6 +21,15 @@ app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get('/', (req, res) => {
     res.json({"message": "Welcome to FundooNotes application."});
 });
+
+require('./app/utilities/auth');
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Configuring the database
 const dbConfig = require('./config/database.config.js');
