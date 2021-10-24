@@ -178,7 +178,6 @@ class NoteController{
       }
       noteService.deleteNoteById(ids, (error, data) => {
         if(error){
-          console.log("Error Is", error)
           logger.error(error)
           return res.status(400).json({
             message: error,
@@ -191,8 +190,6 @@ class NoteController{
             success: false
           })
         }else{
-          console.log("Data is", data)
-
           logger.info("Note deleted successfully")
           redis.clearCache(ids.noteId)
           return res.status(204).json({

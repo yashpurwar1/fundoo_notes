@@ -86,14 +86,14 @@ class Controller {
                     logger.error(error)
                     return res.status(400).json({
                         message: error,
-                        status: false,
+                        success: false,
                     })
                 }
                 else {
                     logger.info("Login Success");
                     return res.status(201).json({
                         message: 'Login Success',
-                        status: true,
+                        success: true,
                         token: token
                         
                     });
@@ -104,7 +104,7 @@ class Controller {
             logger.error("Internal server error")
             return res.status(500).json({
                 message: "Internal server error",
-                status: false,
+                success: false,
                 data: null
             });
         }
@@ -121,7 +121,7 @@ class Controller {
                     logger.error(error)
                     return res.status(400).json({
                         message: error,
-                        status: false,
+                        success: false,
                     })
                 }
                 else {
@@ -136,7 +136,7 @@ class Controller {
                     logger.info("Mail Sent Successfully");
                     return res.status(250).json({
                         message: "Mail Sent Successful",
-                        status: true
+                        success: true
                     });
                 }
             });
@@ -145,7 +145,7 @@ class Controller {
             logger.error(error)
             return res.status(500).json({
                 message: "Internal server error",
-                status: false,
+                success: false,
                 data: null
             });
         }
@@ -163,13 +163,13 @@ class Controller {
                     logger.error(error)
                     return res.status(400).json({
                         message: error,
-                        status: false
+                        success: false
                     })
                 }
                 logger.info("Password updated")
                 return res.status(204).json({
                     message: data,
-                    status: true
+                    success: true
                 })
 
             })
@@ -178,7 +178,7 @@ class Controller {
             logger.error(error)
             return res.status(500).json({
                 message: "Internal server error",
-                status: false
+                success: false
             })
         }
     }

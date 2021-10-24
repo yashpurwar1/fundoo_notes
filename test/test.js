@@ -23,6 +23,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(201);
+        res.body.should.have.property("success").eql(true);
+        res.body.should.have.property("message").eql("User Registered");
         done();
       });
   });
@@ -38,6 +40,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(400);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Email already registered");
         done();
       });
   });
@@ -53,6 +57,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -68,6 +74,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -83,6 +91,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -98,6 +108,8 @@ describe('registartion', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -117,6 +129,8 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(201);
+        res.body.should.have.property("success").eql(true);
+        res.body.should.have.property("message").eql("Login Success");
         done();
       });
   });
@@ -132,6 +146,8 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(400);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Invalid email");
         done();
       });
   });
@@ -147,6 +163,8 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(400);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Invalid password");
         done();
       });
   });
@@ -162,6 +180,8 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -177,6 +197,8 @@ describe('login', () => {
           return done(err);
         }
         res.should.have.status(422);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("validation failed");
         done();
       });
   });
@@ -195,6 +217,8 @@ describe ('forgotPassword', () =>{
           return done(err);
         }
         res.should.have.status(250);
+        res.body.should.have.property("success").eql(true);
+        res.body.should.have.property("message").eql("Mail Sent Successful");
         done();
       });
   });
@@ -210,6 +234,8 @@ describe ('forgotPassword', () =>{
           return done(err);
         }
         res.should.have.status(400);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Invalid email");
         done();
       });
   });
@@ -247,6 +273,8 @@ describe('resetPassword', ()=>{
           return done(error);
         }
         res.should.have.status(401);
+        res.body.should.have.property("success").eql(false);
+        res.body.should.have.property("message").eql("Unauthorized Token or token expired");
         done();
       });
   });

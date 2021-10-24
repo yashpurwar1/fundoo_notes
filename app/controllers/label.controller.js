@@ -9,9 +9,7 @@ class labelController{
           id: req.user.id,
           labelName: req.body.labelName
       }
-      console.log(label)
       const validate = validation.createValidate.validate(label);
-      console.log(validate)
       if (validate.error){
         logger.error(validate.error);
         return res.status(422).json({
@@ -19,7 +17,6 @@ class labelController{
             message: "validation failed", 
         })
       }
-      console.log("after validation")
       labelService.createNote(label)
         .then((data) => {
           logger.info("Label created successfully")

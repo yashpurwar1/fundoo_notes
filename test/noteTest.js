@@ -5,6 +5,9 @@ const server = require('../server');
 chai.use(chaiHttp);
 const data = require('./noteData.json');
 
+const delToken = {
+  token:""
+}
 chai.should();
 
 describe('createNote', () => {
@@ -21,6 +24,9 @@ describe('createNote', () => {
               return done(error);
             }
             res.should.have.status(201);
+            res.body.should.have.property("success").eql(true);
+            res.body.should.have.property("message").eql("Note created successfully");
+            delToken.token = res.body.data._id;
             done();
         });
     });
@@ -38,6 +44,8 @@ describe('createNote', () => {
               return done(error);
             }
             res.should.have.status(422);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("validation failed");
             done();
         });
     });
@@ -55,6 +63,8 @@ describe('createNote', () => {
               return done(error);
             }
             res.should.have.status(401);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Unauthorized Token or token expired");
             done();
         });
     });
@@ -72,6 +82,8 @@ describe('getNote', ()=>{
               return done(error);
             }
             res.should.have.status(200);
+            res.body.should.have.property("success").eql(true);
+            res.body.should.have.property("message").eql("Fetched successfully");
             done();
         });
     });
@@ -87,6 +99,8 @@ describe('getNote', ()=>{
               return done(error);
             }
             res.should.have.status(401);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Unauthorized Token or token expired");
             done();
         });
     });
@@ -104,6 +118,7 @@ describe('getNoteById',()=>{
               return done(error);
             }
             res.should.have.status(200);
+            res.body.should.have.property("success").eql(true);
             done();
         });
     });
@@ -119,6 +134,8 @@ describe('getNoteById',()=>{
               return done(error);
             }
             res.should.have.status(401);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Unauthorized Token or token expired");
             done();
         });
     });
@@ -134,6 +151,8 @@ describe('getNoteById',()=>{
               return done(error);
             }
             res.should.have.status(400);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Incorrect noteId");
             done();
         });
     });
@@ -153,6 +172,8 @@ describe('updateNoteById',()=>{
               return done(error);
             }
             res.should.have.status(200);
+            res.body.should.have.property("success").eql(true);
+            res.body.should.have.property("message").eql("Updated successfully");
             done();
         });
     });
@@ -170,6 +191,8 @@ describe('updateNoteById',()=>{
               return done(error);
             }
             res.should.have.status(401);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Unauthorized Token or token expired");
             done();
         });
     });
@@ -187,6 +210,8 @@ describe('updateNoteById',()=>{
               return done(error);
             }
             res.should.have.status(400);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Note not updated");
             done();
         });
     });
@@ -197,7 +222,7 @@ describe('deleteNoteById', () =>{
         const token = data.validToken;
         chai
           .request(server)
-          .delete('/deleteNoteById/61654f51497df29d16c8b5cd')
+          .delete(`/deleteNoteById/${delToken.token}`)
           .set({ authorization: token })
           .end((error, res) => {
             if(error){
@@ -219,6 +244,8 @@ describe('deleteNoteById', () =>{
               return done(error);
             }
             res.should.have.status(401);
+            res.body.should.have.property("success").eql(false);
+            res.body.should.have.property("message").eql("Unauthorized Token or token expired");
             done();
         });
     });
