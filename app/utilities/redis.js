@@ -1,7 +1,12 @@
 const redis = require('redis')
 const client = redis.createClient()
 
-
+/**
+ * @module:         Redis
+ * @file:           redis.js
+ * @description:    Contains the cache info for getLabelById and getNoteById
+ * @author:         Yash
+*/
 
 class Redis{
     getLabelById = (req, res, next) => {

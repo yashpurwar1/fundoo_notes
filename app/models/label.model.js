@@ -1,3 +1,9 @@
+/**
+ * @module:         models
+ * @file:           label.model.js
+ * @description:    label.model is for label schema and operations on database
+ * @author:         Yash
+ */
 const mongoose = require('mongoose')
 const labelSchema = mongoose.Schema({
   userId: {

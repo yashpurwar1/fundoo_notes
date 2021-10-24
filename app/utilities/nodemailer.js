@@ -1,6 +1,13 @@
 const nodemailer = require('nodemailer');
 const { logger } = require('../../logger/logger.js');
 
+/**
+ * @module:         nodemailer
+ * @file:           nodemailer.js
+ * @description:    Takes the mailMessage, and sends it to the recievers mail 
+ * @author:         Yash
+*/
+
 exports.sendEmail = (mailMessage) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",

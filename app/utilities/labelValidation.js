@@ -1,5 +1,11 @@
 const Joi = require('joi');
 
+/**
+ * @module:         labelValidation
+ * @file:           labelValidation.js
+ * @description:    Validates the label data entered by user
+ * @author:         Yash
+*/
 class labelValidation{
     createValidate = Joi.object({
         labelName: Joi.string()

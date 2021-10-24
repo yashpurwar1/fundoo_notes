@@ -1,3 +1,10 @@
+/**
+ * @module:         controllers
+ * @file:           note.controller.js
+ * @description:    Taking the request from the client and gives the response.
+ * @author:         Yash
+*/
+
 const { logger } = require('../../logger/logger.js');
 const noteService = require('../service/note.service');
 const validation = require('../utilities/noteValidation');
@@ -5,6 +12,11 @@ const labelController = require('../controllers/label.controller')
 const redis = require('../utilities/redis')
 
 class NoteController{
+  /**
+     * @description:    Create and save notes and sending response to service
+     * @method:         creates the note for the user
+     * @param:          req,res for service
+     */
   createNote = (req, res) => {
     try{
       const note = {
@@ -46,6 +58,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Fetches all the notes registered by a user
+     * @method:         Fetches the notes of the user
+     * @param:          req,res for service
+     */
   getNote = (req, res) => {
     try {
       const id = { id: req.user.id };
@@ -82,6 +99,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Fetches the note for the given note id
+     * @method:         getNoteById 
+     * @param:          req,res for service
+     */
   getNoteById = async (req, res) => {
     try{
       const ids = {
@@ -121,6 +143,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Updates the note given by the user
+     * @method:         updates the note for the user
+     * @param:          req,res for service
+     */
   updateNoteById = async (req, res)=>{
     try{
       const note ={
@@ -162,6 +189,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Deletes the saved notes by id and sending response to service
+     * @method:         deletes the note for the user
+     * @param:          req,res for service
+     */
   deleteNoteById = (req, res) => {
     try{
       const ids = {
@@ -208,6 +240,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Adds the label in the noteId and note in the label id
+     * @method:         adds label for the user
+     * @param:          req,res for service
+     */
   addLabelById = async (req, res)=>{
     try{
       const ids ={
@@ -240,6 +277,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Deletes the label for entered note and sending response to service
+     * @method:         deletes note label for the user
+     * @param:          req,res for service
+     */
   deleteLabel = async (req, res) => {
     try {
       const ids = {
@@ -271,6 +313,11 @@ class NoteController{
     }
   }
 
+  /**
+     * @description:    Adds collabrator for the entered note and sending response to service
+     * @method:         noteCollaboeator
+     * @param:          req,res for service
+     */
   noteCollaborator = (req, res) => {
     try {
       const data = {

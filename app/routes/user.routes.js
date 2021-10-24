@@ -28,9 +28,9 @@ module.exports=(app) =>{
     app.get('/getLabelById/:labelId', helper.verifyToken, redis.getLabelById, labelController.getLabelById);
     app.put('/updateLabelByID/:labelId', helper.verifyToken, labelController.updateLabelById);
     app.delete('/deleteLabelById/:labelId', helper.verifyToken, labelController.deleteLabelById);
-
+    // Api routes for add label and delete label
     app.post('/addLabel/:noteId/:labelId', helper.verifyToken, noteController.addLabelById);
     app.post('/deleteLabel/:noteId/:labelId', helper.verifyToken, noteController.deleteLabel);
-
+    // Api route for note collaborater
     app.post('/notecollaborator/:noteId', helper.verifyToken, noteController.noteCollaborator);
 }

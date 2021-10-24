@@ -1,3 +1,10 @@
+/**
+ * @module:         service
+ * @file:           label.service.js
+ * @description:    callbacks from the model and takes input from controller
+ * @author:         Yash
+ */
+
 const labelModel = require('../models/label.model');
 class LabelService {
   createNote = (label) => {

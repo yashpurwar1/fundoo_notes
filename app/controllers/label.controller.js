@@ -1,8 +1,20 @@
+/**
+ * @module:         controllers
+ * @file:           label.controller.js
+ * @description:    Taking the request from the client and gives the response.
+ * @author:         Yash
+*/
+
 const { logger } = require('../../logger/logger.js');
 const labelService = require('../service/label.service');
 const validation = require('../utilities/labelValidation');
 const redis = require('../utilities/redis')
 class labelController{
+  /**
+     * @description:    Creates label and sending response to service
+     * @method:         creates the label for the user
+     * @param:          req,res for service
+     */
   createLabel = (req, res) => {
     try{
       const label = {
@@ -43,6 +55,11 @@ class labelController{
     }
   }
 
+  /**
+     * @description:    Fetches all the label for the current user and sending response to service
+     * @method:         Fetches all th labels for the user
+     * @param:          req,res for service
+     */
   getLabel = (req, res) => {
     try {
       const id = { id: req.user.id };
@@ -71,6 +88,11 @@ class labelController{
     }
   }
 
+    /**
+     * @description:    Fetches label by id and sending response to service
+     * @method:         Fetches label by id labels for the user
+     * @param:          req,res for service
+     */
   getLabelById = async (req, res) => {
     try{
       const ids = {
@@ -102,6 +124,11 @@ class labelController{
     }
   }
 
+    /**
+     * @description:    Updates label by id and sending response to service
+     * @method:         Updates label by the id for the user
+     * @param:          req,res for service
+     */
   updateLabelById = async (req, res)=>{
     try{
       const label ={
@@ -142,6 +169,11 @@ class labelController{
     }
   }
 
+    /**
+     * @description:    Deletes the entered label id and sending response to service
+     * @method:         deletes the label id for the user
+     * @param:          req,res for service
+     */
   deleteLabelById = (req, res) => {
     try{
       const ids = {
@@ -180,6 +212,11 @@ class labelController{
     }
   }
 
+    /**
+     * @description:    Adds note id in the label id and sending response to service
+     * @method:         addNoteId
+     * @param:          req,res for service
+     */
   addNoteId = async (ids) => {
     try {
       const data = await labelService.addNoteId(ids);
@@ -188,6 +225,12 @@ class labelController{
       return err;
     }
   }
+
+  /**
+     * @description:    Deletes note id in the label id and sending response to service
+     * @method:         deleteNoteId
+     * @param:          req,res for service
+     */
   deleteLabel = async (ids) => {
     try {
       const data = await labelService.deleteLabel(ids);

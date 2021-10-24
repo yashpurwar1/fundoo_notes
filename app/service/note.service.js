@@ -1,5 +1,17 @@
+/**
+ * @module:         service
+ * @file:           note.service.js
+ * @description:    callbacks from the model and takes input from controller
+ * @author:         Yash
+ */
+
 const noteModel = require('../models/note.model');
 class NoteService {
+  /**
+      * @description:    Send response to the controller
+      * @method:         createNote
+      * @param:          note
+      */
   createNote = (note) => {
     return new Promise((resolve, reject) => {
       noteModel.createNote(note)
@@ -12,6 +24,11 @@ class NoteService {
     })
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         getNote
+      * @param:          ids
+      */
   getNote = (id) => {
     return new Promise((resolve, reject) => {
       noteModel.getNote(id)
@@ -24,6 +41,11 @@ class NoteService {
     })
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         getNoteById
+      * @param:          ids
+      */
   getNoteById = async (ids) => {
     try{
       return await noteModel.getNoteById(ids)
@@ -33,6 +55,11 @@ class NoteService {
     }
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         updateNoteById
+      * @param:          note
+      */
   updateNoteById = async (note) => {
     try{
       return await noteModel.updateNoteById(note)
@@ -42,6 +69,11 @@ class NoteService {
     }
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         deleteNoteById
+      * @param:          ids, callabck
+      */
   deleteNoteById = (ids, callback) => {
     noteModel.deleteNoteById(ids, (error, data)=>{
       if (error){
@@ -52,6 +84,11 @@ class NoteService {
     })
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         addLabelById
+      * @param:          ids
+      */
   addLabelById = async (ids) => {
     try{
       return await noteModel.addLabelById(ids)
@@ -61,6 +98,11 @@ class NoteService {
     }
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         deleteNoteById
+      * @param:          ids
+      */
   deleteLabel = async (ids) => {
     try {
       const data = await noteModel.deleteLabel(ids);
@@ -70,6 +112,11 @@ class NoteService {
     }
   }
 
+  /**
+      * @description:    Send response to the controller
+      * @method:         noteCollaborator
+      * @param:          data, callback
+      */
   noteCollaborator = (data, callback)=> {
     try {
       noteModel.noteCollaborator(data, (err, updateData)=>{

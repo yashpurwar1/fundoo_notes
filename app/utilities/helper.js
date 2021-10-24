@@ -10,6 +10,11 @@
  require("dotenv").config();
  
 class helper{
+  /**
+     * @description:    Creates hash of password entered by user
+     * @method:         passwordHash for creating hash
+     * @param:          password for creating hash, callback
+     */
     passwordHash = (password, callback) => {
         bcrypt.hash(password, 10, (err, hash) =>{
            if(err){
@@ -19,7 +24,12 @@ class helper{
            }
         })
       }
- 
+
+      /**
+     * @description:    Creates token for recieved data
+     * @method:         token for generating token
+     * @param:          data for generating token, callback
+     */
      token = (data, callback) => {
          const key = jwt.sign({
          firstName: data.firstName,
@@ -33,7 +43,12 @@ class helper{
          }
          
      }  
- 
+
+     /**
+     * @description:    Creates token for forgot password data
+     * @method:         tokenForgotPassword for token
+     * @param:          data for generating token, callback
+     */
      tokenForgotPassword = (data, callback) => {
          const key = jwt.sign({
          firstName: data.firstName,
@@ -47,6 +62,13 @@ class helper{
              return callback(err, null);
          }
      } 
+
+     /**
+     * @description:    Verifies token and returns data
+     * @method:         verifyToken for entered token and pass it to next
+     * @param:          req, res, next
+     */
+
      verifyToken = (req, res, next) => {
         const header = req.headers.authorization;
         const bearerToken = header.split(' ');

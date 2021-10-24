@@ -1,5 +1,12 @@
 const winston = require('winston');
 
+/**
+ * @module:         logger
+ * @file:           logger.js
+ * @description:    Logs all the activities in the info and error file
+ * @author:         Yash
+*/
+
 module.exports.logger = winston.createLogger({
   transports: [
     new winston.transports.File({

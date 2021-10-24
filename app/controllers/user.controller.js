@@ -110,7 +110,11 @@ class Controller {
         }
 
     }
-
+    /**
+     * @description:    Send mail to the user registered email with the token
+     * @method:         forgotPassord
+     * @param:          req,res for service
+     */
     forgotPassword = (req, res) => {
         try{
             const user = {
@@ -151,7 +155,11 @@ class Controller {
         }
 
     }
-
+    /**
+     * @description:    Resets the user password by authenticating token
+     * @method:         resetPassword
+     * @param:          req,res for service
+     */
     resetPassword = (req, res) => {
         try{
             const user = {

@@ -57,6 +57,11 @@ const { logger } = require('../../logger/logger.js');
          });
      }
  
+     /**
+      * @description:    Generates token and send response to the controller
+      * @method:         forgotPassword
+      * @param:          user, callback for controller
+      */
      forgotPassword = (user, callback) => {
          userModel.findEmail(user, (err, data) => {
              if (err) {
@@ -73,6 +78,11 @@ const { logger } = require('../../logger/logger.js');
          });
      };
  
+     /**
+      * @description:    Send response to the controller
+      * @method:         resetPassword
+      * @param:          user, callback for controller
+      */
     resetPassword = (user, callback) =>{         
         userModel.resetPassword(user, (error, data)=>{
             if(error){

@@ -1,3 +1,9 @@
+/**
+ * @module:         models
+ * @file:           note.model.js
+ * @description:    note.model is for note schema and operations on database
+ * @author:         Yash
+ */
 const userModel = require('../models/user.model')
 const mongoose = require('mongoose')
 const noteSchema = mongoose.Schema({
