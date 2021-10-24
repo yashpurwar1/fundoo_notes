@@ -5148,3 +5148,10 @@
 {"level":"info","message":"Mail Sent Successfully","timestamp":"2021-10-24T10:42:33.486Z"}
 {"level":"error","message":"Invalid email","timestamp":"2021-10-24T10:42:33.503Z"}
 {"level":"info","message":"Password updated","timestamp":"2021-10-24T10:42:33.609Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:51:44.921Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:52:32.314Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T10:52:47.502Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T11:01:20.386Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T11:02:29.861Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T11:03:30.736Z"}
+{"level":"info","message":"Server is listening on port : 3000","timestamp":"2021-10-24T11:08:09.251Z"}
