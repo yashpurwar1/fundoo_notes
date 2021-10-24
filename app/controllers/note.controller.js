@@ -215,7 +215,6 @@ class NoteController{
         id: req.user.id,
         labelId: req.params.labelId
       }
-      console.log(ids)
       const data = await noteService.addLabelById(ids)
       const labelData = await labelController.addNoteId(ids)
       if (data.name || labelData.name){
