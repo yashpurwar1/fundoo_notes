@@ -52,9 +52,12 @@
              password: userDetails.password,
          });
  
+         // To create the hash of the password
          helper.passwordHash(newUser.password, (err, hash) => {
              if (hash) {
              newUser.password = hash;
+
+             //To the the user in the database
              newUser.save().then(
                  ()=>{
                      return callback(null, newUser);
@@ -74,6 +77,7 @@
      * @param:          callback for service
      */
     findEmail = (loginData, callBack) => {
+        //To find a user email in the database
         user.findOne({ email: loginData.email }, (error, data) => {
             if (data) {
                 return callBack(null, data);           
@@ -89,13 +93,16 @@
      * @param:          user and callback for service
      */
     resetPassword = (newUser, callback) =>{
+        //To find a user in the database by the user email
         user.findOne({email: newUser.email }, (error, data) =>{
             if(error){
                 return callback("No user found with following email", null)
             }else{
+                // To generate the hash of the password
                 helper.passwordHash(newUser.newPassword, (err, hash) => {
                     if (hash) {
                         const updatedPassword = hash;
+                        // To update the old password with the new one
                         user.updateOne({"_id": data._id}, {"password": updatedPassword}, (error, data) => {
                             if(data.acknowledged == true){
                                 return callback (null, "Updated successfully")
@@ -114,6 +121,7 @@
     }
 
     socialLogin = async (userData) => {
+        //To find a user in the database by the email
         return await user.findOne({ email: userData.email }).then(data => {
             if (data !== null) {
                 return data;
@@ -127,6 +135,7 @@
                     googleLogin: userData.googleLogin
                 });
                 const datauser = async () => {
+                    // Save the data in the database if the user is not already saved 
                     await data.save();
                 };
                 datauser();

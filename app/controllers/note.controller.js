@@ -24,6 +24,8 @@ class NoteController{
           title: req.body.title,
           description: req.body.description
       }
+
+      // To validate the data entered by user
       const validate = validation.createValidate.validate(note);
       if (validate.error){
         logger.error(validate.error);
@@ -66,6 +68,8 @@ class NoteController{
   getNote = (req, res) => {
     try {
       const id = { id: req.user.id };
+
+      // To validate the data entered by user
       const validate = validation.getValidate.validate(id);
       if (validate.error){
         logger.error(validate.error);
@@ -110,6 +114,8 @@ class NoteController{
         id: req.user.id,
         noteId: req.params.noteId
       }
+
+      // To validate the data entered by user
       const validate = validation.getNoteByIdValidate.validate(ids);
       if (validate.error){
         logger.error(validate.error);
@@ -156,6 +162,8 @@ class NoteController{
         title: req.body.title,
         description: req.body.description
       }
+
+      // To validate the data entered by user
       const validate = validation.updateValidate.validate(note);
       if (validate.error){
         logger.error(validate.error);
@@ -200,6 +208,8 @@ class NoteController{
         noteId: req.params.noteId,
         id: req.user.id
       }
+
+      // To validate the data entered by user
       const validate = validation.deleteValidate.validate(ids);
       if (validate.error){
         logger.error(validate.error);

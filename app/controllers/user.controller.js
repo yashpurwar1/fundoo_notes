@@ -26,6 +26,8 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
+
+            // To validate the data entered by user
             const registerValidation = validation.registerValidation.validate(user);
             if (registerValidation.error){
                 logger.error(registerValidation.error);
@@ -73,6 +75,8 @@ class Controller {
                 email: req.body.email,
                 password: req.body.password
             };
+
+            // To validate the data entered by user
             const loginValidation = validation.loginValidation.validate(loginDetails);
             if (loginValidation.error){
                 logger.error(loginValidation.error);

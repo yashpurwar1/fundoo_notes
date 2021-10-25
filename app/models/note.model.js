@@ -34,6 +34,7 @@ const noteSchema = mongoose.Schema({
 
 const Notes = mongoose.model('Notes', noteSchema);
 class NoteModel {
+  //Creates a note for the user by the given data
   createNote = (note) => {
     return new Promise((resolve, reject) =>{
       const noteInfo = new Notes({
@@ -41,6 +42,7 @@ class NoteModel {
         title: note.title,
         description: note.description
       });
+      //Saves the data in the database
       noteInfo.save()
         .then((data) =>{
           resolve(data)
@@ -53,6 +55,7 @@ class NoteModel {
 
   getNote = (id) => {
     return new Promise((resolve, reject) =>{
+      //Finds the note in the databse by the given id
       Notes.find({ userId: id.id })
         .then((data) => {
           resolve(data)
@@ -65,6 +68,7 @@ class NoteModel {
 
   getNoteById = async (ids) => {
     try{
+      // Finds the note in the database by the given ids
       return await Notes.find({ userId: ids.id, _id: ids.noteId })
     }
     catch(error){
@@ -76,6 +80,7 @@ class NoteModel {
     const filter = {userId: note.id, _id: note.noteId};
     const update = {title: note.title, description: note.description};
     try{
+      // Updates the note for the given title or description in the database
       return await Notes.findOneAndUpdate(filter, update, {new: true})
     }
     catch(error){
@@ -85,6 +90,7 @@ class NoteModel {
 
   deleteNoteById = (ids, callback)=>{
     const filter = {userId: ids.id, _id: ids.noteId};
+    // Finds a note for the given ids in the database and deletes them
     Notes.findOneAndDelete(filter, (error, data) =>{
       if(error){
         return callback("Not able to find the note", null)
@@ -96,6 +102,7 @@ class NoteModel {
 
   addLabelById = async (ids) => {
     try{
+      //Pushes a label in the note and updates the database
       return await Notes.findByIdAndUpdate(ids.noteId, { $push: { labels: ids.labelId } }, {new: true})
     }
     catch(error){
@@ -105,6 +112,7 @@ class NoteModel {
 
   deleteLabel = async (ids) => {
     try {
+      //Pulls a label in the note and updates the database
       return await Notes.findByIdAndUpdate(ids.noteId, { $pull: { labels: ids.labelId } }, { new: true });
     }
     catch (error) {
@@ -117,16 +125,20 @@ class NoteModel {
       const email= {
         email: data.collabEmail
       }
+      //Finds user with the given mail in the user database
       userModel.findEmail(email, (err, userData) => {
         if(userData){
+          // finds the noteId in the notes database
           Notes.findOne({_id: data.noteId}, (err, note)=>{
             const collab = note.collaborator;
+            //Loop to find if the user is already collabrated or not
             for(let i=0; i<collab.length; i++){
               if(collab[i] == userData.id){
                 return callback("User already collabrated", null)
               }
             }
-            });
+          });
+          //Finds the notes and pushes collabrater
           Notes.findByIdAndUpdate(data.noteId, { $push: { collaborator: userData.id } }, { new: true } ,(err, updatedData)=>{
             if (updatedData){
               return callback(null, updatedData);

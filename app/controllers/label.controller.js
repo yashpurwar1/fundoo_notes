@@ -21,6 +21,8 @@ class labelController{
           id: req.user.id,
           labelName: req.body.labelName
       }
+      
+      // To validate the data entered by user
       const validate = validation.createValidate.validate(label);
       if (validate.error){
         logger.error(validate.error);
@@ -136,6 +138,8 @@ class labelController{
         id: req.user.id,
         labelName: req.body.labelName
       }
+
+      // To validate the data entered by user
       const validate = validation.updateValidate.validate(label);
       if (validate.error){
         logger.error(validate.error);

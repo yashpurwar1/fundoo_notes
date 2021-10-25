@@ -35,7 +35,7 @@ module.exports=(app) =>{
     app.post('/deleteLabel/:noteId/:labelId', helper.verifyToken, noteController.deleteLabel);
     // Api route for note collaborater
     app.post('/notecollaborator/:noteId', helper.verifyToken, noteController.noteCollaborator);
-
+    //Api for the google social login
     app.get('/failed', (req, res) => res.send('You Have Failed To Login...!!!'));
     app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
     app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }), helper.tokenAuthentication, controller.socialLogin);
